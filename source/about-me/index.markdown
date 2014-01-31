@@ -1,12 +1,12 @@
 ---
 layout: page
-title: ""
+title: "关于漏斗"
 date: 2014-01-30 15:13
 comments: true
 sharing: true
 footer: true
----
 
+---
 性能测试小兵一枚    
 常年不务正业，学习各种开发相关的知识    
 目前会的东西:    
