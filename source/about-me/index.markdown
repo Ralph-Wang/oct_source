@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "关于漏斗"
+title: "关于_漏斗"
 date: 2014-01-30 15:13
 comments: true
 sharing: true
