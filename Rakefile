@@ -4,6 +4,7 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
+editor         = "vim"
 ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
@@ -113,6 +114,7 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
+  system "sleep 1; #{editor} #{filename}"  # 自动打开编辑器
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
@@ -149,6 +151,7 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
     end
+    system "sleep 1; #{editor} #{filename}"  # 自动打开编辑器
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
