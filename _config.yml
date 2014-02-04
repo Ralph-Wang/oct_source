@@ -64,7 +64,7 @@ default_asides: [custom/asides/weibo.html, custom/asides/category_list.html, cus
 # ----------------------- #
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-47787507-1
 
 # Weibo
 weibo_uid: 1854716251
