@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="span9">
+<div class="span8">
   {% assign index = true %}
   {% for post in paginator.posts %}
   {% assign content = post.content %}
@@ -20,7 +20,7 @@ layout: default
     {% endif %}
   </ul>
 </div>
-<aside class="sidebar-nav span3">
+<aside class="sidebar-nav span4">
   {% if site.blog_index_asides.size %}
     {% include_array blog_index_asides %}
   {% else %}
