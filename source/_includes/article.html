@@ -1,5 +1,5 @@
 {% unless page.no_header %}
-  <header class="page-header">
+  <header class="">
     {% if index %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
@@ -20,9 +20,10 @@
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+      <a class="btn btn-info" role="botton" rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
     </footer>
   {% endif %}
 {% else %}
 <div class="entry-content">{{ content }}</div>
 {% endif %}
+<hr />
