@@ -8,6 +8,8 @@ categories: octopress
 
 
 更换[`boottrap-theme`](http://github.com/bkutil/bootstrap-theme)后，边栏只有**最近发表**和**文章分类**两项内容显得有点寒碜。于是想着添加个新浪微博的边栏试试
+
+<!--more-->
 #### 使用微博秀服务
 微博提供的一个小工具。点[这里](http://weibo.com/tool/weiboshow)查看。
 

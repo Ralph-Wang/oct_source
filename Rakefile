@@ -113,6 +113,9 @@ task :new_post, :title do |t, args|
     post.puts "comments: true"
     post.puts "categories: "
     post.puts "---"
+    post.puts ""
+    post.puts ""
+    post.puts "<!--more-->"
   end
   system "sleep 1; #{editor} #{filename}"  # 自动打开编辑器
 end

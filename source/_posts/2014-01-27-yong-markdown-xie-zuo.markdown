@@ -6,7 +6,8 @@ comments: true
 categories: samples
 ---
 
-### 这是用 octpress + github 写的第一篇博客
+<!--more-->
+**这是用 octpress + github 写的第一篇博客**
 
 用`markdown`写作是一个让人很爽快的事情。之前在 cnblogs 时也是特意找了几个
 `markdown`插件。偶然的机会，在[枯木君](http://kumu-linux.github.io)的博客中了解到可以用
