@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "关于_漏斗"
+title: "关于我"
 date: 2014-01-30 15:13
 comments: true
 sharing: true
@@ -21,3 +21,17 @@ footer: true
 ### 博客目的   
 记录一些学习和工作上的笔记，心得.    
 在写作过程中也能更好的整理自己的思路.    
+
+
+```c
+#include <stdio.h>
+
+void main()
+{
+	double world;
+	unsigned letter;
+	short stay;
+	long memories;
+	printf("I miss you!\n");
+}
+```
