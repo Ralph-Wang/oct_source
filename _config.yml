@@ -70,4 +70,9 @@ google_analytics_tracking_id: UA-47787507-1
 baidu_analytics_tracking: true
 # Weibo
 weibo_uid: 1854716251
-weibo_share: true
+
+# jia_share
+jia_share: true
+
+# uyan
+uyan_id: 1891593

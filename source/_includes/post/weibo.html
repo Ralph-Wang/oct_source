@@ -1,3 +1,4 @@
+{% if site.jia_share %}
 <!-- JiaThis Button BEGIN -->
 <div class="jiathis_style">
   <span class="jiathis_txt">分享到：</span>
@@ -12,8 +13,11 @@
 <script type="text/javascript"
 src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 <!-- JiaThis Button END -->
+{% endif %}
+{% if site.uyan_id %}
 <!-- UY BEGIN -->
 <div id="uyan_frame"></div>
 <script type="text/javascript"
-src="http://v2.uyan.cc/code/uyan.js?uid=1891593"></script>
+src="http://v2.uyan.cc/code/uyan.js?uid={{1891593}}"></script>
 <!-- UY END -->
+{% endif %}
