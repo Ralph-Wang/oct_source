@@ -71,8 +71,8 @@ baidu_analytics_tracking: true
 # Weibo
 weibo_uid: 1854716251
 
-# jia_share
-jia_share: true
+# baidu_share
+baidu_share: true
 
 # uyan
 uyan_id: 1891593
