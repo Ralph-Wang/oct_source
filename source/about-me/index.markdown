@@ -1,5 +1,6 @@
 ---
 layout: page
+navbar: About
 title: "关于我"
 date: 2014-01-30 15:13
 comments: true
