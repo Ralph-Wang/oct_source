@@ -9,12 +9,13 @@ categories: java
 监控 Java 线程时，首先要关注的就是线程的运行状态。
 
 一般来说，Java 线程有 6 种状态： 
-1. NEW 
-2. RUNNABLE 
-3. WAITING & TIMED_WAITING
-4. SLEEP
-5. BLOCK
-6. TERMINATED
+
+1.  NEW     
+2.  RUNNABLE     
+3.  WAITING & TIMED_WAITING    
+4.  SLEEP    
+6.  TERMINATED    
+5.  BLOCK    
 
 下面，用代码示例一下各个状态
 <!--more-->
