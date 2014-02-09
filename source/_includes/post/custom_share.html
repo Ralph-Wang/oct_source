@@ -12,10 +12,20 @@
 Date()/36e5)];</script>
 <!-- Baidu Share END -->
 {% endif %}
-{% if site.uyan_id %}
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript"
-src="http://v2.uyan.cc/code/uyan.js?uid={{1891593}}"></script>
-<!-- UY END -->
+{% if site.duoshuo_shortname %}
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-form-position="top" data-order="asc" data-limit=15 ></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"{{site.duoshuo_shortname}}"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = 'http://static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0] 
+  ||
+  document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
+<!-- Duoshuo Comment END -->
 {% endif %}
