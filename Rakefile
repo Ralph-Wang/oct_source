@@ -154,7 +154,7 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
     end
-    system "sleep 1; #{editor} #{filename}"  # 自动打开编辑器
+    system "sleep 1; #{editor} #{file}"  # 自动打开编辑器
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
