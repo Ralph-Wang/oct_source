@@ -19,6 +19,8 @@ footer: true
 * The Mythical Man-Month (人月神话）
 
 ## 进行中:
+* 卑鄙的圣人: 曹操
+* 你的第一本思维导图操作书
 * Think In Java 4 (Java编程思想第四版)
 * Refactoring (重构)
 
