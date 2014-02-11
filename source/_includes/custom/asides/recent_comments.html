@@ -1,15 +1,18 @@
 {% if site.duoshuo_shortname %}
-<section class="well">
-  <ul id="recent_comments" class="nav nav-list">
-    <li class="nav-header">最新评论</li>
-    <li> <ul class="ds-recent-comments"
+<section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">最新评论</h3>
+  </div>
+  <div id="recent_comments" class="list-group">
+    <ul class="ds-recent-comments"
       data-num-items="10"
-      data-show-avatars="0"
+      data-show-avatars="1"
       data-show-time="1"
-      data-show-title="0"
+      data-show-title="1"
       data-show-admin="1"
       data-excerpt-length="70"
-      ></ul> </li>
-  </ul>
+      style="padding-left:20px"
+      ></ul>
+  </div>
 </section>
 {% endif %}
