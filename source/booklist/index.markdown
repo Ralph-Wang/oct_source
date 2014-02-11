@@ -13,7 +13,7 @@ footer: true
 这里用来记录一些我已经读过的, 正在读的, 做准备要读的书
 
 ## 已读:
-* Core Python Programming  ## 编程入门强烈推荐. 面向对象, 函数式编程什么的概念讲解很清楚
+* Core Python Programming (Python 核心编程)
 * 黑客与画家
 * 打造Facebook
 * The Mythical Man-Month (人月神话）
@@ -21,7 +21,7 @@ footer: true
 ## 进行中:
 * 卑鄙的圣人: 曹操
 * 你的第一本思维导图操作书
-* Think In Java 4 (Java编程思想第四版)
+* Think In Java 4 (Java 编程思想第四版)
 * Refactoring (重构)
 
 ## 备忘:

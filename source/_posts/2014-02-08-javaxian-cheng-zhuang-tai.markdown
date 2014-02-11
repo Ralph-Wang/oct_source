@@ -10,12 +10,12 @@ categories: java
 
 一般来说，Java 线程有 6 种状态： 
 
-1.  NEW     
-2.  RUNNABLE     
-3.  WAITING & TIMED_WAITING    
-4.  SLEEP    
-6.  TERMINATED    
-5.  BLOCK    
+1.  NEW
+2.  RUNNABLE
+3.  WAITING & TIMED_WAITING
+4.  SLEEP
+6.  TERMINATED
+5.  BLOCK
 
 下面，用代码示例一下各个状态
 <!--more-->
