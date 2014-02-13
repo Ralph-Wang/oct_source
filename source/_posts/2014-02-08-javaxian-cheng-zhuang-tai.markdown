@@ -8,6 +8,7 @@ categories: java
 
 监控 Java 线程时，首先要关注的就是线程的运行状态。
 
+<!--more-->
 一般来说，Java 线程有 6 种状态： 
 
 1.  NEW
@@ -18,7 +19,6 @@ categories: java
 5.  BLOCK
 
 下面，用代码示例一下各个状态
-<!--more-->
 
 ### 1. NEW & TERMINATED
 这两个状态比较特殊，分别出现在线程**运行之前**和线程**运行之后**。
