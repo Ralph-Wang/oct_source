@@ -13,6 +13,7 @@ single: true
           {% include post/author.html %}
           {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
           {% include post/categories.html %}
+          {% include post/tags.html %}
         </p>
         {% if page.previous.url or page.next.url %}
           <ul class="meta text-muted pager">
