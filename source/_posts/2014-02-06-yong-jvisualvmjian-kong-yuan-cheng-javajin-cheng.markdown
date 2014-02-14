@@ -3,6 +3,7 @@ layout: post
 title: "用jvisualvm监控远程java进程"
 date: 2014-02-06 21:48:26 +0800
 comments: true
+tags: [java, 监控, jvm, jvisualvm]
 categories: java
 ---
 

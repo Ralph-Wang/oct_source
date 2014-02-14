@@ -3,6 +3,7 @@ layout: post
 title: "java线程状态"
 date: 2014-02-08 11:07:52 +0800
 comments: true
+tags: [java, jvm, 线程, jvisualvm]
 categories: java
 ---
 

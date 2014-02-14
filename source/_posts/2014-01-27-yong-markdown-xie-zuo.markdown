@@ -3,7 +3,8 @@ layout: post
 title: "用 markdown 写作"
 date: 2014-01-27 18:14:13 +0800
 comments: true
-categories: samples
+tags: [octopress, init]
+categories: octpress
 ---
 
 **这是用 octpress + github 写的第一篇博客**

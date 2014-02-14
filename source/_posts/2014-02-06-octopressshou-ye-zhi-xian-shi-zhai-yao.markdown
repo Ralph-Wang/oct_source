@@ -3,6 +3,7 @@ layout: post
 title: "octopress首页只显示摘要"
 date: 2014-02-06 00:30:36 +0800
 comments: true
+tags: [octopress, 摘要]
 categories: octopress
 ---
 
