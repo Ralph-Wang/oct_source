@@ -4,7 +4,7 @@ title: "用 markdown 写作"
 date: 2014-01-27 18:14:13 +0800
 comments: true
 tags: [octopress, init]
-categories: octpress
+categories: octopress
 ---
 
 **这是用 octpress + github 写的第一篇博客**
