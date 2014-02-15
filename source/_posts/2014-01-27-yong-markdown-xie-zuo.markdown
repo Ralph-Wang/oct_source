@@ -3,6 +3,8 @@ layout: post
 title: "用 markdown 写作"
 date: 2014-01-27 18:14:13 +0800
 comments: true
+keywords: octopress, markdown, 写作, 博客
+description: 第一篇博客, 开始用 markdown 写作
 tags: [octopress, init]
 categories: octopress
 ---

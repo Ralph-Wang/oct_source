@@ -3,6 +3,8 @@ layout: post
 title: "为 Octopress 添加 Tag 功能"
 date: 2014-02-15 00:09:14 +0800
 comments: true
+keywords: octopress, 边栏, 扩展, 标签, 分类, Tags, Tag, Cloud
+description: 为 octopress 添加 标签 功能, 并添加 边栏的 标签云
 tags: [octopress, 边栏, 扩展]
 categories: octopress
 ---

@@ -3,6 +3,8 @@ layout: post
 title: "Java之Boxing和Unboxing"
 date: 2014-02-09 22:07:16 +0800
 comments: true
+keywords: java, 特性, 基本类型, 引用类型, 拆箱, 装箱, boxing, unboxing
+description: java 中 基本类型 的 自动装箱 与 自动拆箱
 tags: [java, boxing, 拆箱, 装箱, 数据类型]
 categories: java
 ---

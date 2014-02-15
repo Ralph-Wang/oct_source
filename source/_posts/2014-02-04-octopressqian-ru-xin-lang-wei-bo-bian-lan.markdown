@@ -3,6 +3,8 @@ layout: post
 title: "octopress嵌入新浪微博边栏"
 date: 2014-02-04 18:26:31 +0800
 comments: true
+keywords: octopress, 扩展, 边栏, 微博, asides
+description: 为 octopress 添加边栏, 用以呈现新浪微博
 tags: [octopress, 边栏, 扩展]
 categories: octopress
 ---
