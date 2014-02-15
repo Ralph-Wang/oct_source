@@ -80,3 +80,7 @@ duoshuo_shortname: ralph-wang
 
 ## douban
 douban_domain: ralph_ld
+douban_n: 9
+douban_col: 3
+douban_selection: random
+douban_picsize: small
