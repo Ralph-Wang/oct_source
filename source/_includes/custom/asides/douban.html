@@ -1,0 +1,11 @@
+{% if site.douban_domain %}
+<section class="panel panel-default clearfix">
+    <div class="panel-heading">
+        <h3 class="panel-title">豆瓣书单</h3>
+    </div>
+    <div style="padding-left:40px">
+        <script type="text/javascript"
+src="http://www.douban.com/service/badge/{{ site.douban_domain }}/?selection=random&amp;picsize=medium&amp;show=collection&amp;n=8&amp;cat=book&amp;columns=2"></script>
+    </div>
+</section>
+{% endif %}
