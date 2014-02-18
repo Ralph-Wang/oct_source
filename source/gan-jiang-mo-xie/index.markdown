@@ -1,0 +1,25 @@
+---
+layout: page
+title: "干将莫邪"
+navbar: Sharps
+date: 2014-02-18 15:06
+comments: true
+sharing: true
+keywords: 测试工具, 系统监控, 代码监控, 数据库监控, LoadRunner, LR
+description: 性能测试相关工具, 监控手段, 分析思路
+footer: true
+---
+
+性能测试常用工具使用技巧备忘.
+
+
+## 1. Loadrunner
+* [LR 关联之 Alfresco](http://ralph-wang.github.io/blog/2014/02/18/lr-guan-lian-zhi-alfresco/)
+
+## 2. Linux
+
+
+## 3. Java
+* [用jvisualvm监控远程java进程](http://ralph-wang.github.io/blog/2014/02/06/yong-jvisualvmjian-kong-yuan-cheng-javajin-cheng/)
+
+## 4. Databases
