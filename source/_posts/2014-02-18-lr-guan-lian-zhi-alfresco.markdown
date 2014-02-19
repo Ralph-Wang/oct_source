@@ -86,6 +86,11 @@ categories: LoadRunner
 由于信息中的特殊符号被 `URL编码` 了, 导致在前后两个请求中看上去有些不一样.
 通过解码我们可以确认, 这里就是关联参数的来源
 
+```javascript
+decodeURIComponent('NPizHL2EuHsHN6VMml0sAfezFhPQmT5fynjkx%2fkqP88%3d')
+
+// output: NPizHL2EuHsHN6VMml0sAfezFhPQmT5fynjkx/kqP88=
+```
 
 ### 解决方案
 
