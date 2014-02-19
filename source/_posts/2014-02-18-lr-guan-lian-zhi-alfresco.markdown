@@ -132,14 +132,10 @@ web_reg_save_param("token",
 ...
 // user requests codes
 ...
-lr_convert_string_encoding(lr_eval_string("{token}"),LR_ENC_SYSTEM_LOCALE,
-		LR_ENC_UTF8 , "token"); 
-web_convert_param("token", "SourceEncoding=URL",
-		"TargetEncoding=PLAIN",LAST );
-lr_convert_string_encoding(lr_eval_string("{token}"),LR_ENC_UTF8
-		, LR_ENC_SYSTEM_LOCALE, "token");
 
+web_convert_param("token", "SourceEncoding=URL", "TargetEncoding=PLAIN",LAST );
 web_add_header("Alfresco-CSRFToken", lr_eval_string("{token}"));
+
 ...
 // submit requests codes
 ```
