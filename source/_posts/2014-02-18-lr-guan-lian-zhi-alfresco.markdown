@@ -106,15 +106,14 @@ web_add_header("Alfresco-CSRFToken", url_decode(lr_eval_string("{token}")));
 ...
 ```
 TIPS:
+
 * 由于不能直接在请求中添加请求头信息, 所以我们需要调用 `web_add_header`
 函数来添加.
 
-* 因为系统发送过来的 `token` 是 `URL编码` 的字符串, 而提交新增时发送回去的是解码过的. 所以我们在添加 header 时需要进行解码.
-
-* 这就是 `url_decode` 函数的作用了. 这个函数并不是 LR 自带的函数, 所以需要自行添加. 源代码见[这里](http://www.51testing.com/html/96/n-832896.html)
+* 因为系统发送过来的 `token` 是 `URL编码` 的字符串, 而提交新增时发送回去的是解码过的. 所以我们在添加 header 时需要进行解码.  这就是 `url_decode` 函数的作用. 这个函数并不是 LR 自带的函数, 需要自行添加. 源代码及添加方法戳[这里](http://www.51testing.com/html/96/n-832896.html)
 
 -----
-关于 url 编码问题, 后来又找到一个 LoadRunner 原生的解决方案如下:
+关于 `URL编码` 问题, 后来又找到一个 LoadRunner 原生的解决方案如下:
 
 [http://blog.csdn.net/womengdoushizhongguo/article/details/8517598](http://blog.csdn.net/womengdoushizhongguo/article/details/8517598)
 
