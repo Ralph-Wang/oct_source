@@ -41,7 +41,7 @@ categories: java
 
 运行`jstatd`时需要用`-J-Djava.security.policy`参数指定策略文件
 ```bash
-jstatd -J-Djava.security.policy=jstatd.all.policy=./jstatd.all.policy
+jstatd -J-Djava.security.policy=jstatd.all.policy
 ```
 
 
