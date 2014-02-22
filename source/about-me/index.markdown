@@ -9,7 +9,7 @@ footer: true
 
 ---
 
-```c toyouknowwho.c
+```c just a segment
 #include <stdio.h>
 
 void main()
