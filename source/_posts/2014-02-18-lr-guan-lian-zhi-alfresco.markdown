@@ -139,6 +139,12 @@ web_add_header("Alfresco-CSRFToken", lr_eval_string("{token}"));
 ...
 // submit requests codes
 ```
+## 02.24 更新
+--------
+--------
+再往深了想一下, 如果前端通过某种自定义的算法加密的验证信息再返回系统.
+
+那没有开发配合, 这脚本还真没法完成了.
 
 [1]: /blogimgs/alfresco-errmsg.png "Err Msg"
 [2]: /blogimgs/alfresco-500page.png "500 Page"
