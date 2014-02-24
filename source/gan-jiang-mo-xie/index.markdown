@@ -10,7 +10,7 @@ description: 性能测试相关工具, 监控手段, 分析思路
 footer: true
 ---
 
-性能测试常用工具使用技巧备忘.
+测试常用工具使用技巧备忘.
 
 ## 0. nodejs
 * [mocha + should](https://github.com/Ralph-Wang/mochaSample)
