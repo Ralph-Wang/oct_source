@@ -141,7 +141,7 @@ module Jekyll
     def tag_links(tags)
       dir = @context.registers[:site].config['tag_dir'] || 'tags'
       tags = tags.sort!.map do |item|
-        "<a class='tag' href='/#{dir}/#{item.to_url}/'>#{item}</a>"
+        "<a class='tag' href='#{dir}/#{item.to_url}/'>#{item}</a>"
       end
 
       case tags.length
