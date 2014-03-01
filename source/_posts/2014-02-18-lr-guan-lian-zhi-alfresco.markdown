@@ -26,7 +26,7 @@ categories: LoadRunner
 
 ![Test Result][2]
 
-如上图, 虽然是虽然请求返回的状态码是 500, 但返回页面仍是 Alfresco 的页面, 
+如上图, 虽然请求返回的状态码是 500, 但返回页面仍是 Alfresco 的页面, 
 
 
 ### 分析
