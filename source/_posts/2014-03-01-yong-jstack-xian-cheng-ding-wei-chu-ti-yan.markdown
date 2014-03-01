@@ -79,42 +79,7 @@ $jstack 100162
 
 上完整源码
 
-{% gist 9290490 testStack.java %}
-```java testStack.java
-public class testJstack {
-	public static void main(String[] args) {
-		Thread t = new Thread(new Fibonacci());
-		t.start();
-	}
-}
-
-class Fibonacci implements Runnable {
-	public void run() {
-		while (true) {
-			for (int i = 0; i < 20; i++) {
-				System.out.println(calcFibo(i));
-			}
-		}
-	}
-
-	/**
-	 * 最土最慢的蜚波那契计算函数.
-	 * @return int
-	 */
-	private int calcFibo(final int n) {
-
-		if (n == 0) {
-			return 0;
-		} else if (n == 1) {
-			return 1;
-		}
-		else {
-			return calcFibo(n-1) + calcFibo(n-2);
-		}
-	}
-}
-```
-
+{% gist 9290490 testJstack.java %}
 
 [1]: /blogimgs/thread-top.png "use top"
 [2]: /blogimgs/thread-topHp.png "use top -H -p <pid>"
