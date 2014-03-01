@@ -11,7 +11,7 @@ categories: LoadRunner
 
 遇到一个比较特别的关联的例子. 
 <!--more-->
-项目是 [Alfresco](http://www.alfresco.com).
+项目是 **Alfresco**
 需要开发的脚本业务: 管理员新增用户.
 
 
