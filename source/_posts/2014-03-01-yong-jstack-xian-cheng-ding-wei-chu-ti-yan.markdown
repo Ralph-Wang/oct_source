@@ -5,8 +5,8 @@ date: 2014-03-01 22:42:48 +0800
 comments: true
 keywords: java, jstack, 线程, 堆栈, 分析, 问题定位, 瓶颈定位
 description: 用 top + jstack 定位 java 进程问题, 定位到代码行号.
-tags: 
-categories: 
+tags: java, jstack, 堆栈, top
+categories: java
 ---
 
 用 top + jstack 定位 java 线程问题
