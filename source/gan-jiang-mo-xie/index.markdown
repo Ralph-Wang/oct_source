@@ -27,5 +27,7 @@ footer: true
 
 ## 3. Java
 * [用jvisualvm监控远程java进程](http://ralph-wang.github.io/blog/2014/02/06/yong-jvisualvmjian-kong-yuan-cheng-javajin-cheng/)
+* [jstack
+  定位堆栈](http://ralph-wang.github.io/blog/2014/03/01/yong-jstack-xian-cheng-ding-wei-chu-ti-yan/)
 
 ## 4. Databases
