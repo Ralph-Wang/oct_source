@@ -63,8 +63,9 @@ categories: java
 ![sleep](/blogimgs/status-sleep.png)
 
 注：如果用**线程 dump** 查看，会发现 sleep 线程标示的是 **TIMED_WATING**
-> ---更新---
-> 但在 **TIMED_WATING** 后会显示 (sleeping) 作为与 wait 调用的区分
+
+> ---更新---    
+> 但在 **TIMED_WATING** 后会显示 (sleeping) 作为与 wait 调用的区分    
 
 ### 4.WAITING & TIMED_WAITING
 和休眠类似，等待状态下的线程也没有在运行。但是等待下的线程可以随时被唤醒。
@@ -82,9 +83,9 @@ categories: java
 
 ![timed_wating](/blogimgs/status-timedwait.png)
 
-> --更新--
-> 可以看到在 **TIMED_WATING** 后有显示 (on object monitor)
-> 表示调用的是 wait, 而不是 sleep
+> --更新--    
+> 可以看到在 **TIMED_WATING** 后有显示 (on object monitor)    
+> 表示调用的是 wait, 而不是 sleep    
 
 ### 5.BLOCK
 在线程中，可以使用 `sychronized` 关键字锁住某些资源，以保证其它线程不能同时访问。如果这时其它线程需要这个资源，就会进入**阻塞**状态。
