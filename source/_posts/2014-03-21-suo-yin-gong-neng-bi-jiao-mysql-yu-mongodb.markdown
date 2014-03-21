@@ -137,7 +137,6 @@ db.tbl.dropIndex('value_1');
 
 使用 explain 命令可以获得 MySQL 中 SQL 语句的执行计划.
 
-先来看一下没有使用索引时, 执行计划是什么样的.
 ```mysql
 mysql> explain select * from tbl where value = 1;
 | id | select_type | table | type | possible_keys | key  | key_len | ref  | rows | Extra       |
