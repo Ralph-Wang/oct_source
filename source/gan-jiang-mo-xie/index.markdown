@@ -31,3 +31,5 @@ footer: true
   定位堆栈](http://ralph-wang.github.io/blog/2014/03/01/yong-jstack-xian-cheng-ding-wei-chu-ti-yan/)
 
 ## 4. Databases
+* [索引功能比较 MySQL 与
+  MongoDB](http://ralph-wang.github.io/blog/2014/03/21/suo-yin-gong-neng-bi-jiao-mysql-yu-mongodb/)
