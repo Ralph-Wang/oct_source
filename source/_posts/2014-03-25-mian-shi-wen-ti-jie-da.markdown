@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "面试问题总结"
+title: "面试技术问题解答"
 date: 2014-03-25 19:49:37 +0800
 comments: true
 keywords: 面试, Java, Linux, MySQL, 算法
@@ -107,7 +107,7 @@ log-queries-not-using-indexes # 记录下没有使用索引的查询
 算法
 -----
 ## 问题 1 链表倒序
-...面试时, 想到去 clone next.. 为毛当时就不值得多给个变量呢...
+...面试时, 想到去 clone next.. 为毛当时就没想到多给个变量呢...
 
 ```java List.java
 public class List<T> { // 后进先出列表
