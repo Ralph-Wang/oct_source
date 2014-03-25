@@ -13,7 +13,7 @@ categories: 面试
 <!--more-->
 Linux
 ------
-## 统计文本中某字符串出现次数
+### 统计文本中某字符串出现次数
 前提: 一行中要查找的字符串可能出现多次.
 
 文本样例:
@@ -36,7 +36,7 @@ two times ralph ,ralph
 
 遂搜索之.  得如下解法
 
-## 方法 1: grep 的 -o 选项
+### 方法 1: grep 的 -o 选项
 
 ```bash
 cat sample | grep -o ralph | wc -l
@@ -45,7 +45,7 @@ cat sample | grep -o ralph | wc -l
 
 给 `grep` 加上 `-o` 选项后, 它只会打印出匹配到的字符串, 并且每匹配一次就打印一行. 
 
-## 方法 2: 神器 awk 之 RS
+### 方法 2: 神器 awk 之 RS
 
 ```bash
 awk -v RS='ralph' 'END {print NR-1}' sample
@@ -57,7 +57,7 @@ awk 中 RS 变量为行分隔符, 用目标字符串分隔行, 则总行数 = �
 
 在 END 中访问 NR 则为最后一行的行号, awk 起始行为 1, 所以此时总行数 = NR
 
-## 方法 3: 神器 awk 之 gsub
+### 方法 3: 神器 awk 之 gsub
 
 ```bash
 awk '{count+=gsub(/ralph/, "#")} END {print count}' sample
@@ -106,7 +106,7 @@ log-queries-not-using-indexes # 记录下没有使用索引的查询
 
 算法
 -----
-## 问题 1 链表倒序
+### 问题 1 链表倒序
 ...面试时, 想到去 clone next.. 为毛当时就没想到多给个变量呢...
 
 ```java List.java
@@ -203,6 +203,6 @@ public class List<T> { // 后进先出列表
 ```
 算法还是弱项...
 
-## 问题 2 文本替换
+### 问题 2 文本替换
 今天太晚了, 明天再继续
 
