@@ -5,7 +5,7 @@ date: 2014-03-25 19:49:37 +0800
 comments: true
 keywords: 面试, Java, Linux, MySQL, 算法
 description: 面试时遇到的一些问题, 当时没有完全答上来的
-tags: 面试, Java, Linux, MySQL, 算法
+tags: [面试, Java, Linux, MySQL, 算法]
 categories: 面试
 ---
 
@@ -66,6 +66,11 @@ awk '{count+=gsub(/ralph/, "#")} END {print count}' sample
 awk 中的 `gsub` 返回文本的替换次数, 对每行的替换次数求和即可.
 
 另外, awk 中的 `sub` 函数在每行中只完成一次替换.
+
+Java
+------
+### 反射
+参考[反射案例](http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html)
 
 MySQL
 ------
