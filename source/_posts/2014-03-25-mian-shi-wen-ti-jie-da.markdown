@@ -211,8 +211,10 @@ public class List<T> { // 后进先出列表
 
 ### 问题 2 文本替换
 今天太晚了, 明天再继续
-*** 2014-04-06 更新 ***
-需求, 字符串或字符数组, 如 `AABBAAABBACCDD`, 取出连续的字符, 第N次出现取出连续N个, 不足则跳过
+
+---*** 2014-04-06 更新 ***---
+
+需求, 字符串或字符数组, 如 `AAABBBAAACCADDD`, 取出连续的字符, 第N次出现取出连续N个, 不足则跳过
 
 如 AAABBBAAACCADDD -> ABAACAD
 
@@ -237,7 +239,7 @@ public class Sub {
 		int curCount = 0;
 		char pre = '\0';
 		for (int i = 0; i < charArray.length; i++) {
-			if (charArray[i] == pre && curCount >= >seq) >{
+			if (charArray[i] == pre && curCount >= seq) {
 				continue;
 			}
 			if (charArray[i] != pre) { // recount the new char
