@@ -205,9 +205,58 @@ public class List<T> { // 后进先出列表
 		}
 	}
 }
+
 ```
 算法还是弱项...
 
 ### 问题 2 文本替换
 今天太晚了, 明天再继续
+*** 2014-04-06 更新 ***
+需求, 字符串或字符数组, 如 `AABBAAABBACCDD`, 取出连续的字符, 第N次出现取出连续N个, 不足则跳过
 
+如 AAABBBAAACCADDD -> ABAACAD
+
+
+```java
+import java.util.*;
+
+public class Sub {
+	public static void main(String[] args) {
+		char[] t = {'A', 'A', 'A', 'B', 'B', 'B','A', 'A', 'A', 'C',
+			'C', 'A', 'D', 'D', 'D'};
+		System.out.println(sub(t));
+	}/* output:
+		ABAACAD
+	  *///:~
+
+	public static String sub(final char[] charArray) {
+		String res = "";
+		HashMap<Character, Integer> count =
+			new HashMap<Character, Integer>();
+		int seq = 0;
+		int curCount = 0;
+		char pre = '\0';
+		for (int i = 0; i < charArray.length; i++) {
+			if (charArray[i] == pre && curCount >= >seq) >{
+				continue;
+			}
+			if (charArray[i] != pre) { // recount the new char
+				curCount = 0;
+				// get the sequence of the char
+				if (count.get(charArray[i]) == null) {
+					seq = 1;
+				} else {
+					seq = count.get(charArray[i]) + 1;
+				}
+				// cache the char sequence
+				count.put(charArray[i], seq);
+			}
+			res = res + charArray[i];
+			curCount++;
+			pre = charArray[i];
+		}
+		return res;
+	}
+}
+
+```
