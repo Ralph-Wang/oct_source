@@ -262,3 +262,4 @@ public class Sub {
 }
 
 ```
+若使用 `String` 作为输入, 则用 charAt 方法获取字符
