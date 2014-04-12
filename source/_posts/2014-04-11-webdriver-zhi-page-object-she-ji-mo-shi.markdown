@@ -64,9 +64,9 @@ class BasePage(BrowserContainer):
 		self.driver.get(self.baseURL + self.path)
 
 ```
-BrowserContainer 是一个抽象类, 用来存储 driver 和测试站点的 baseURL
+`BrowserContainer` 是一个抽象类, 用来存储 driver 和测试站点的 baseURL
 
-BasePage 也是一个抽象类, 继承自 BrowserContainer, 后续所有测试页面都继承自它
+`BasePage` 也是一个抽象类, 继承自 BrowserContainer, 后续所有测试页面都继承自它
 
 ```python Site.py
 import page.Base
