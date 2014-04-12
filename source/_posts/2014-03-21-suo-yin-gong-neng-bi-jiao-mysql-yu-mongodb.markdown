@@ -5,7 +5,7 @@ date: 2014-03-21 10:37:08 +0800
 comments: true
 keywords: MongoDB, MySQL, 索引
 description: MongoDB 与 MySQL 中 数据库索引相关功能的比较
-tags: MySQL, MongoDB, 索引, RDBMS, NoSQL
+tags: [MySQL, MongoDB, 索引, RDBMS, NoSQL]
 categories: 数据库
 ---
 
