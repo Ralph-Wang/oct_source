@@ -6,7 +6,7 @@ comments: true
 keywords: awk, linux, 环境变量, 管道, 换行
 description: 用 awk 分割单行的 PATH 环境变量 为多行 , 方便查看
 tags: [linux, awk, 环境变量, tips]
-categories: linux
+categories: Linux
 ---
 
 
