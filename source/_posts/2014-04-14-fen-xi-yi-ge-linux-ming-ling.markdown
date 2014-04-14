@@ -12,9 +12,8 @@ categories: Linux
 通过拆解查看 CPU 信息的组合命令, 来学习每个独立命令
 <!--more-->
 
- 查看 CPU 信息
+查看 CPU 型号及数量
 -----------
-## 1. 查看 CPU 型号
 原命令
 ```bash
 #cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
