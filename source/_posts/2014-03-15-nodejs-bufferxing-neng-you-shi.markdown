@@ -5,7 +5,7 @@ date: 2014-03-15 21:24:23 +0800
 comments: true
 keywords: nodejs, Buffer, 性能, 测试
 description: nodejs 中 使用 Buffer 的性能优势
-tags: nodejs, 性能, Buffer
+tags: [nodejs, 性能, Buffer]
 categories: nodejs
 ---
 
