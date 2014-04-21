@@ -44,3 +44,6 @@ more keyboard, less mouse.
 邮箱: ralph\_ld#aliyun.com
 
 QQ: 182307203
+
+old\_blogs: [\_漏斗的博客园](http://www.cnblogs.com/Ralph-Wang/)
+
