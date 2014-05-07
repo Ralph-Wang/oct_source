@@ -41,16 +41,23 @@ public class Test {
 
 将 `apache-jmeter-*.*` 复制到任意你喜欢的目录
 
-配置 Jmeter 环境变量
-```bash
-JMETER_HOME=/where/you/put/apache-jmeter-*.*
-CLASSPATH=$CLASSPATH:$JMETER_HOME/lib/logkit-2.0.jar:$JMETER_HOME/lib/jorphan.jar:$JMETER_HOME/lib/ext/ApacheJMeter_core.jar
-```
-其实就是在 `CLASSPATH` 中添加三个 jar 包:
+下面这段其实完全不需要 ( 2014-05-07 更新 )
 
-* $JMETER\_HOME/lib/logkit-2.0.jar
-* $JMETER\_HOME/lib/jorphan.jar
-* $JMETER\_HOME/lib/ext/ApacheJMeter\_core.jar
+> 配置 Jmeter 环境变量
+
+> JMETER_HOME=/where/you/put/apache-jmeter-*.*
+
+> CLASSPATH=$CLASSPATH:$JMETER_HOME/lib/logkit-2.0.jar:$JMETER_HOME/lib/jorphan.jar:$JMETER_HOME/lib/ext/ApacheJMeter_core.jar
+
+> 其实就是在 `CLASSPATH` 中添加三个 jar 包:
+
+> $JMETER\_HOME/lib/logkit-2.0.jar
+
+> $JMETER\_HOME/lib/jorphan.jar
+
+> $JMETER\_HOME/lib/ext/ApacheJMeter\_core.jar
+
+
 
 ## 启动 Jmeter
 运行 $JMETER\_HOME/bin 目录下的 jmeter (Windows 环境运行 jmeter.bat)
