@@ -43,9 +43,9 @@ more keyboard, less mouse.
 
 #### 联系方式
 
-邮箱: ralph\_ld#aliyun.com
+邮箱: ralph\_ld#aliyun.com (每天都会收邮件)
 
-QQ: 182307203
+QQ: 182307203 (即使在线也不一定秒回, 不带耳机完全不知道有消息)
 
 old\_blogs: [\_漏斗的博客园](http://www.cnblogs.com/Ralph-Wang/)
 
