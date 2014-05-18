@@ -118,7 +118,7 @@ ok, 实现代码很简单 `sort -nr file | head -n 10`
 ```bash
 #!/bin/bash
 
-filename=$1
+filename=${1:?"filename missing"}
 howmany=${2:-10}
 
 sort -nr $filename | head -n $howmany
