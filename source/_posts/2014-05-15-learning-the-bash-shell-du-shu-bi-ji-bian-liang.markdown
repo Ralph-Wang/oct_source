@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Learning The Bash Shell 读书笔记-变量"
+title: "Learning The Bash Shell 笔记-变量"
 date: 2014-05-15 09:35:19 +0800
 comments: true
 keywords: shell, bash, $, String
