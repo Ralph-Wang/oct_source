@@ -97,12 +97,22 @@ end
 这个比较类似 Java 里的 for
 
 ```bash
-for i in list
-begin
+for i [in list]
+do
 	statements
-end
+done
 ```
 这个感觉更像 python 里的 for
+
+若省略 [in list] 的话, 则默认从 $@ 中取值
+
+```bash
+for i in {start..end..step}
+do
+	statements
+done
+```
+bash 4.0 以上才有的语法
 
 ## while & until
 ```bash
