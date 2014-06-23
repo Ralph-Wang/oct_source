@@ -19,6 +19,7 @@ footer: true
 * [LR 关联之 Alfresco](http://ralph-wang.github.io/blog/2014/02/18/lr-guan-lian-zhi-alfresco/)
 
 ## 2. Linux
+* 查看发行版: `cat /etc/*release`
 * [CPU](https://gist.github.com/Ralph-Wang/9191153)
 * [内存](https://gist.github.com/Ralph-Wang/9191195)
 * [磁盘](https://gist.github.com/Ralph-Wang/9191224)
