@@ -1,0 +1,94 @@
+#!/usr/bin/env python2
+# coding = utf8
+
+import sys
+import re
+import markdown
+import codecs
+
+TAG_FOR_WRAP = '{{{slides}}}'
+WRAP_FILE = './resources/wrap.html'
+SECTION_WRAPER_FILE = './resources/section.html'
+SECTION_SPLIT_PATTERN = re.compile('\.{3,}')
+HTML_TAG_PATTERN = re.compile('<.*?>')
+
+def usage():
+    print '''Usage:
+        markdeck file1 [file2 [file3]...]'''
+
+def write_to_file(filename, strings):
+    fobj = None
+    try:
+        fobj = codecs.open(filename, 'w', encoding="utf-8")
+        fobj.write(strings)
+    except IOError:
+        print 'write to file `%s` error' % filename
+    finally:
+        if fobj is not None:
+            fobj.close()
+
+def get_file_content_safely(filename):
+    '''get_file_content_safely: open file and read all file content'''
+    fobj = None
+    try:
+        fobj = codecs.open(filename, 'r', encoding='utf-8')
+        content = fobj.read().strip()
+    except IOError:
+        print 'read file `%s` error' % filename
+        content = '<h1>Read File Error</h1>'
+    finally:
+        if fobj is not None:
+            fobj.close()
+    return content
+
+def render_section(section):
+    '''render_section: render a section'''
+    html = markdown.markdown(section)
+    _wrapper = get_file_content_safely(SECTION_WRAPER_FILE)
+    try:
+        result = _wrapper % html
+    except TypeError:
+        result = _wrapper
+        print 'missing `%%s` in `%s`' % WRAP_FILE
+
+    # re tag codes
+    result = result.replace('<p><code>', '<pre><code>')\
+            .replace('</code></p>', '</code></pre>')
+    #print result
+    return result
+
+def render_file(filename):
+    '''render_file: render the mardown'''
+    content = get_file_content_safely(filename)
+    sections = SECTION_SPLIT_PATTERN.split(content)
+    title = HTML_TAG_PATTERN.sub('', sections[0].replace('#',''))
+    rendered = ''
+    for section in sections:
+        rendered += render_section(section)
+    return title, rendered
+
+def wrap(title, html):
+    '''wrap: wrap slides with the htmls'''
+    _wrapper = get_file_content_safely(WRAP_FILE)
+    #print _wrapper
+    try:
+        result = _wrapper % TAG_FOR_WRAP
+    except TypeError:
+        result = _wrapper
+        print 'missing `%%s` in `%s`' % WRAP_FILE
+
+    # add title
+    result = result.replace('<title></title>', '<title>%s</title>' % title)
+    return result.replace(TAG_FOR_WRAP, html)
+
+def main(argv):
+    for filename in argv:
+        basename = filename.split('.')[0]
+        write_to_file('%s.html' % basename, wrap(*render_file(filename)))
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        usage()
+    else:
+        main(sys.argv[1:])
