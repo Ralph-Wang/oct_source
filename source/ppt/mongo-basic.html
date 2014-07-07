@@ -50,10 +50,21 @@
 <blockquote>
 <p>嘁, 打个酱油</p>
 </blockquote></section><section class="slide"><h2>大纲 Syllibus</h2>
+<h3>1. 关系型数据库与 NoSQL</h3>
 <ul>
-<li>关系型数据库与 NoSQL</li>
-<li>MongoDB 基础</li>
+<li>什么是数据库</li>
+<li>关系型数据库</li>
+<li>NoSQL 数据库</li>
+</ul>
+<h3>2. MongoDB 基础</h3>
+<ul>
+<li>为什么独爱 MongoDB</li>
+<li>MongoDB 基本使用</li>
+</ul>
+<h3>3. 在 Python 中使用 MongoDB</h3>
+<ul>
 <li>在 Python 中使用 MongoDB</li>
+<li>一个简单的项目(带单元测试)</li>
 </ul></section><section class="slide"><h2>什么是数据库? WTF Database</h2>
 <ul>
 <li>我们需要一个<code>工具</code>来保存和管理一些<code>资源</code></li>
@@ -94,7 +105,7 @@ delete from tbl where f1 = 11;</code></pre>
 <p>MongoDB
 <img alt="mongodb" src="./imgs/mongodb.jpg" /></p>
 </li>
-</ul></section><section class="slide"><h2>为什么独爱 Mongo Why Mongo?</h2>
+</ul></section><section class="slide"><h2>为什么独爱 MongoDB Why MongoDB?</h2>
 <ul>
 <li>与 <strong>Redis</strong> 匹敌的查询速度</li>
 <li>与 <strong>RDBMS</strong> 们相当的查询功能</li>
@@ -120,11 +131,14 @@ for (var i=0; i &lt; 10; i++) {
     "num" : 1024,
     "list" : [1, 2, 3]
 }</code></pre></section><section class="slide"><h2>安装 Install</h2>
+<h3>1. <a href="http://www.mongodb.org/downloads">下载</a></h3>
 <ul>
-<li><a href="http://www.mongodb.org/downloads">下载</a></li>
-<li>解压</li>
-<li>运行</li>
-</ul></section><section class="slide"><h2>存储结构 Struct</h2>
+<li>根据你的系统版本选择</li>
+</ul>
+<h3>2. 解压</h3>
+<pre><code>$tar zxvf mongodb-&lt;os-version&gt;-&lt;reversion&gt;.tgz</code></pre>
+<h3>3. 运行</h3>
+<pre><code>$mongod --dbpath /where/you/put/the/data</code></pre></section><section class="slide"><h2>存储结构 Struct</h2>
 <ul>
 <li>库结构</li>
 <li>数据形式 <a href="http://bsonspec.org/">BSON</a> (Binary JSON)
