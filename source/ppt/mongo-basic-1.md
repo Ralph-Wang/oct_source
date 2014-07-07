@@ -1,6 +1,6 @@
-# NoSQL 数据库 <br> MongoDB
+# NoSQL 数据库 <br> MongoDB  <br> I
 
-@`2014-07, MyTesting` 
+2014-07, @MyTesting
 
 
 ...
@@ -21,18 +21,18 @@ Weibo: @\_漏斗
 
 ## 大纲 Syllibus
 
-### 1. 关系型数据库与 NoSQL
+## 1. 关系型数据库与 NoSQL
 
 * 什么是数据库
 * 关系型数据库
 * NoSQL 数据库
 
-### 2. MongoDB 基础
+## 2. MongoDB 基础
 
 * 为什么独爱 MongoDB
 * MongoDB 基本使用
 
-### 3. 在 Python 中使用 MongoDB
+### 3. 在 Python 中使用 MongoDB (Part II)
 
 * 在 Python 中使用 MongoDB
 * 一个简单的项目(带单元测试)
@@ -247,82 +247,6 @@ db.collection.update({}, {$set : {name : 2}, {multi : true, upsert : true}});
 
 # 怎么应用到各类语言?!!!
 
-...
-## 像 RDBMS 一样? Just Like RDBMS?
-
-### 拼接字符串?
-
-```
-import MySQLdb
-def connect_to_MySQL()
-    conn = #connect object to MySQL
-	return conn
-try:
-	conn = connect_to_MySQL()
-	cur = conn.cursor()
-	cur.execute('select * from user where name=' % name) # 查询用户
-	cur.close()
-	conn.close()
-except MySQLdb.Error:
-    print "oops, mysql error"
-```
-...
-
-## [原生 API Native Api](http://api.mongodb.org/)
-
-# 怎么可能!?
-
-```
-import pymongo
-conn = pymongo.MongoClient('mongodb://localhost:27017') # 连接服务器
-db = conn.test # 选择数据库
-tbl = db.tbl # 选择集合
-doc = tbl.find_one()
-print doc
-```
-....
-
-## 一个实例 A Simple Project
-
-### [qboard](https://github.com/Ralph-Wang/qboard)
-
-目录结构
-
-```
-.
-├── main.py
-├── MsgDAO.py
-├── README.md
-├── tests.py
-└── views
-    └── index.tpl
-```
-
-...
-
-## Mongo操作类 MongoDAO
-
-### MsgDAO:
-
-```
-class MsgDAO(object):
-    '''MsgDAO: accesser to database msg in mongodb'''
-    def __init__(self, db):
-        '''Construct Method'''
-    def _get_model(self):
-        '''private method get document model'''
-	def insert(self, detail):
-        '''insert : insert method'''
-	def get(self, detail='', is_answered=None, num=0):
-        '''get : query method'''
-    def count(self, is_answered=NOT_ANSWERED):
-        '''count : count documents'''
-    def up(self, _id):
-        '''up : up a Question'''
-    def answer(self, _id):
-        '''answer: answer a Question'''
-```
-
 .....
 
-# .insert({`'Thanks'` : `'End'`})
+# .insert({`'Thanks'` : `'Next'`})

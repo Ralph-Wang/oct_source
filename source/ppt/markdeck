@@ -11,10 +11,13 @@ WRAP_FILE = './resources/wrap.html'
 SECTION_WRAPER_FILE = './resources/section.html'
 SECTION_SPLIT_PATTERN = re.compile('\.{3,}')
 HTML_TAG_PATTERN = re.compile('<.*?>')
+TITLE_PATTERN = re.compile('<h1>(.*?)</h1>')
+
 
 def usage():
     print '''Usage:
         markdeck file1 [file2 [file3]...]'''
+
 
 def write_to_file(filename, strings):
     fobj = None
@@ -26,6 +29,7 @@ def write_to_file(filename, strings):
     finally:
         if fobj is not None:
             fobj.close()
+
 
 def get_file_content_safely(filename):
     '''get_file_content_safely: open file and read all file content'''
@@ -41,6 +45,7 @@ def get_file_content_safely(filename):
             fobj.close()
     return content
 
+
 def render_section(section):
     '''render_section: render a section'''
     html = markdown.markdown(section)
@@ -53,24 +58,35 @@ def render_section(section):
 
     # re tag codes
     result = result.replace('<p><code>', '<pre><code>')\
-            .replace('</code></p>', '</code></pre>')
-    #print result
+        .replace('</code></p>', '</code></pre>')
+    # print result
     return result
+
 
 def render_file(filename):
     '''render_file: render the mardown'''
     content = get_file_content_safely(filename)
     sections = SECTION_SPLIT_PATTERN.split(content)
-    title = HTML_TAG_PATTERN.sub('', sections[0].replace('#',''))
-    rendered = ''
+
+    # render each section
+    rendered_list = []
     for section in sections:
-        rendered += render_section(section)
-    return title, rendered
+        rendered_list.append(render_section(section))
+
+    # get title for html
+    try:
+        title = TITLE_PATTERN.search(rendered_list[0]).groups()[0]
+        title = HTML_TAG_PATTERN.sub('', title)
+    except (IndexError,AttributeError):
+        title = 'MarkDeck'
+        print 'need a h1 in first section for html title'
+    return title, ''.join(rendered_list)
+
 
 def wrap(title, html):
     '''wrap: wrap slides with the htmls'''
     _wrapper = get_file_content_safely(WRAP_FILE)
-    #print _wrapper
+    # print _wrapper
     try:
         result = _wrapper % TAG_FOR_WRAP
     except TypeError:
@@ -81,10 +97,12 @@ def wrap(title, html):
     result = result.replace('<title></title>', '<title>%s</title>' % title)
     return result.replace(TAG_FOR_WRAP, html)
 
+
 def main(argv):
     for filename in argv:
-        basename = filename.split('.')[0]
-        write_to_file('%s.html' % basename, wrap(*render_file(filename)))
+        if filename.endswith('.md'):
+            print 'rendering', filename
+            write_to_file('%s.html' % filename[:-3], wrap(*render_file(filename)))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>NoSQL 数据库  MongoDB   II</title>
+  
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" href="./deck.js/core/deck.core.css">
+  <link rel="stylesheet" href="./deck.js/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="./deck.js/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="./deck.js/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="./deck.js/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="./deck.js/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- Theme CSS files (menu swaps these out) -->
+  <link rel="stylesheet" id="style-theme-link" href="./deck.js/themes/style/neon.css">
+  <link rel="stylesheet" id="transition-theme-link" href="./deck.js/themes/transition/horizontal-slide.css">
+  
+  <link rel="stylesheet" href="./prettify.css" />
+  <script src="./deck.js/jquery.min.js"></script>
+  <script src="./prettify.js"></script>
+
+  <script src="./deck.js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<section class="slide"><h1>NoSQL 数据库 <br> MongoDB  <br> II</h1>
+<p>2014 - 07, @MyTesting</p></section><section class="slide"><h2>我是谁? Who am I?</h2>
+<h4>网秦广告平台 QA, 花名 @_漏斗</h4>
+<hr />
+<p>GitHub: @<a href="https: // github.com / Ralph - Wang">Ralph - Wang</a></p>
+<p>Blog: <http: //ralph - wang.github.io ></p>
+<p>Weibo: @_漏斗</p>
+<blockquote>
+<p>嘁, 打个酱油</p>
+</blockquote></section><section class="slide"><h2>大纲 Syllibus</h2>
+<h3>1. 关系型数据库与 NoSQL (Part I)</h3>
+<ul>
+<li>什么是数据库</li>
+<li>关系型数据库</li>
+<li>NoSQL 数据库</li>
+</ul>
+<h3>2. MongoDB 基础 (Part I)</h3>
+<ul>
+<li>为什么独爱 MongoDB</li>
+<li>MongoDB 基本使用</li>
+</ul>
+<h2>3. 在 Python 中使用 MongoDB</h2>
+<ul>
+<li>在 Python 中使用 MongoDB</li>
+<li>一个简单的项目(带单元测试)</li>
+</ul></section><section class="slide"><h1>怎么应用到各类语言?!!!</h1></section><section class="slide"><h1>怎么应用到 Python?!!!</h1></section><section class="slide"><h2>预备知识 Knowledge Requirements</h2>
+<ul>
+<li>Python Basic</li>
+</ul>
+<pre><code>name = 'Ralph-Wang'
+age = 25
+if 1 == 2:
+    age = 20
+sum = 0
+for i in range(10):
+    sum += i</code></pre>
+<ul>
+<li>Python dict</li>
+</ul>
+<pre><code>dict_sample = {"key": "value",
+               "num": 1024,
+               "list": [1, 2, 3]}</code></pre></section><section class="slide"><h2>像 RDBMS 一样? Just Like RDBMS?</h2>
+<h3>拼接字符串?</h3>
+<pre><code>import MySQLdb
+def connect_to_MySQL()
+    conn =  # connect object to MySQL
+        return conn
+try:
+    conn = connect_to_MySQL()
+    cur = conn.cursor()
+    cur.execute('select * from user where name=' % name)  # 查询用户
+    cur.close()
+    conn.close()
+except MySQLdb.Error:
+    print "oops, mysql error"</code></pre></section><section class="slide"><h2><a href="http://api.mongodb.org/">原生 API Native Api</a></h2>
+<h1>怎么可能!?</h1>
+<pre><code>import pymongo
+conn = pymongo.MongoClient('mongodb://localhost:27017')  # 连接服务器
+db = conn.test  # 选择数据库
+tbl = db.tbl  # 选择集合
+doc = tbl.find_one()
+print doc</code></pre></section><section class="slide"><h2>一个实例 A Simple Project</h2>
+<h3><a href="https://github.com/Ralph-Wang/qboard">qboard</a></h3>
+<p>目录结构</p>
+<pre><code>.
+├── main.py
+├── MsgDAO.py
+├── README.md
+├── tests.py
+└── views
+    └── index.tpl</code></pre></section><section class="slide"><h2>Mongo操作类 MongoDAO</h2>
+<h3>MsgDAO:</h3>
+<pre><code>class MsgDAO(object):
+    '''MsgDAO: accesser to database msg in mongodb'''
+    def __init__(self, db):
+        '''Construct Method'''
+    def _get_model(self):
+        '''private method get document model'''
+    def insert(self, detail):
+        '''insert : insert method'''
+    def get(self, detail='', is_answered=None, num=0):
+        '''get : query method'''
+    def count(self, is_answered=NOT_ANSWERED):
+        '''count : count documents'''
+    def up(self, _id):
+        '''up : up a Question'''
+    def answer(self, _id):
+        '''answer: answer a Question'''</code></pre></section><section class="slide"><h2>怎么做单元测试? How To Test it?</h2>
+<h3>需要一个 Suite</h3>
+<pre><code>class TestSuite(object):
+    '''TestSuite: simple test suite class'''
+    def __init__(self):
+        self._count = 0
+        self._failure = 0
+    def run_test(self, computed, expected, msg=""):
+        '''run_test: check computed value and expected avlue.'''
+        self._count += 1
+        if computed != expected:
+            print msg, ',', 'Computed:', computed, 'Expected:', expected
+            self._failure += 1
+    def report(self):
+        '''report: report test'''
+        print 'run', self._count, 'cases', self._failure, 'failed'</code></pre></section><section class="slide"><h2>怎么做单元测试? How To Test it?</h2>
+<h3>开始写测试用例:</h3>
+<pre><code>suite = TestSuite()
+msgDAO =  # get msgDAO
+suite.run_test(msgDAO.insert('just_test')['detail'], 'just test', '#insert0')
+suite.run_test(msgDAO.insert(''), None, '#insert0')
+suite.run_test(msgDAO.insert(1), None, '#insert0')
+// Ohter Cases
+suite.report()</code></pre></section><section class="slide"><h1>.insert({<code>'Thanks'</code> : <code>'End'</code>})</h1></section>
+
+<p class="deck-status">
+<span class="deck-status-current"></span>
+/
+<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- Deck Core and extensions -->
+<script src="./deck.js/core/deck.core.js"></script>
+<script src="./deck.js/extensions/hash/deck.hash.js"></script>
+<script src="./deck.js/extensions/menu/deck.menu.js"></script>
+<script src="./deck.js/extensions/goto/deck.goto.js"></script>
+<script src="./deck.js/extensions/status/deck.status.js"></script>
+<script src="./deck.js/extensions/navigation/deck.navigation.js"></script>
+
+<!-- Specific to this page -->
+<script>
+$(function() {
+        // Deck initialization
+        $.deck('.slide');
+        $('pre code').parent().addClass('prettyprint');
+        prettyPrint();
+        });
+</script>
+
+</body>
+</html>
