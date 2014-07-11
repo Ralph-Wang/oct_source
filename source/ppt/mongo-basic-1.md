@@ -21,18 +21,18 @@ Weibo: @\_漏斗
 
 ## 大纲 Syllibus
 
-## 1. 关系型数据库与 NoSQL
+### 1. 关系型数据库与 NoSQL
 
 * 什么是数据库
 * 关系型数据库
 * NoSQL 数据库
 
-## 2. MongoDB 基础
+### 2. MongoDB 基础
 
 * 为什么独爱 MongoDB
 * MongoDB 基本使用
 
-### 3. 在 Python 中使用 MongoDB (Part II)
+#### 3. 在 Python 中使用 MongoDB (Part II)
 
 * 在 Python 中使用 MongoDB
 * 一个简单的项目(带单元测试)
@@ -56,9 +56,9 @@ Weibo: @\_漏斗
 
 ```
 insert into tbl (id, name) values (1, 'string');
-select * from tbl where f1 = 1;
-update tbl set f1 = f1 + 10 where f1 = 1;
-delete from tbl where f1 = 11;
+select * from tbl where id = 1;
+update tbl set id = id + 10 where id = 1;
+delete from tbl where id = 11;
 ```
 
 ![RDBMS](./imgs/rdbms.png)
@@ -97,8 +97,8 @@ delete from tbl where f1 = 11;
 ...............
 
 ## 为什么独爱 MongoDB Why MongoDB?
-* 与 **Redis** 匹敌的查询速度
-* 与 **RDBMS** 们相当的查询功能
+* 优秀的查询性能
+* 强大的查询功能
 
 ![whymongo](./imgs/whymongo.png)
 
@@ -106,6 +106,7 @@ delete from tbl where f1 = 11;
 ............
 
 ## 预备知识 Knowledge Requirements
+
 * JavaScript Basic
 
 ```
@@ -153,17 +154,18 @@ $mongod --dbpath /where/you/put/the/data
 
 ...................
 
-## 存储结构 Struct
-* 库结构
-* 数据形式 [BSON](http://bsonspec.org/) (Binary JSON)
-![struct](./imgs/struct.png)
-
-..............
 ## [Mongo 命令行 Mongo Shell](http://try.mongodb.org/)
 
 * JavaScript 解释器
 
 ![js-interpreter](./imgs/js-interpreter.png)
+
+..............
+
+## 存储结构 Struct
+* 库结构
+* 数据形式 [BSON](http://bsonspec.org/) (Binary JSON)
+![struct](./imgs/struct.png)
 
 ..................
 
@@ -209,8 +211,8 @@ db.collection.find({name : /Ra.*ph/});
 ```
 db.collection.find({age : { $gt : 22}});
 db.collection.find({age : { $lt : 30}});
-db.collection.find({age : {$gt : 22}, {age : {$lt : 30}}}});
-db.collection.find({$or : [age : {$gt : 30}, {age : {$lt : 22}}]});
+db.collection.find({$and [{age : {$gt : 22}}, {age : {$lt : 30}}]};
+db.collection.find({$or : [{age : {$gt : 30}}, {age : {$lt : 22}}]});
 ```
 
 * 排序/跳过/限制 sort/skip/limit

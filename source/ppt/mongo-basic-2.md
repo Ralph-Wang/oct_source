@@ -1,18 +1,18 @@
 # NoSQL 数据库 <br> MongoDB  <br> II
 
-2014 - 07, @MyTesting
+2014-07, @MyTesting
 
 
 ...
 ## 我是谁? Who am I?
 
-#### 网秦广告平台 QA, 花名 @\_漏斗
+### 网秦广告平台 QA, 花名 @\_漏斗
 
 -------------------
 
-GitHub: @[Ralph - Wang](https: // github.com / Ralph - Wang)
+GitHub: @[Ralph-Wang](https://github.com/Ralph-Wang)
 
-Blog: <http: //ralph - wang.github.io >
+Blog: <http://ralph-wang.github.io>
 
 Weibo: @\_漏斗
 
@@ -22,18 +22,18 @@ Weibo: @\_漏斗
 
 ## 大纲 Syllibus
 
-### 1. 关系型数据库与 NoSQL (Part I)
+#### 1. 关系型数据库与 NoSQL (Part I)
 
 * 什么是数据库
 * 关系型数据库
 * NoSQL 数据库
 
-### 2. MongoDB 基础 (Part I)
+#### 2. MongoDB 基础 (Part I)
 
 * 为什么独爱 MongoDB
 * MongoDB 基本使用
 
-## 3. 在 Python 中使用 MongoDB
+### 3. 在 Python 中使用 MongoDB
 
 * 在 Python 中使用 MongoDB
 * 一个简单的项目(带单元测试)
@@ -78,17 +78,12 @@ dict_sample = {"key": "value",
 
 ```
 import MySQLdb
-def connect_to_MySQL()
-    conn =  # connect object to MySQL
-        return conn
-try:
-    conn = connect_to_MySQL()
-    cur = conn.cursor()
-    cur.execute('select * from user where name=' % name)  # 查询用户
-    cur.close()
-    conn.close()
-except MySQLdb.Error:
-    print "oops, mysql error"
+conn = MySQLdb.connect(host='localhost', db='test')
+cur = conn.cursor()
+sql = 'select id, name from tbl where id=%s'
+cur.execute(sql, 1)  # 查询数据
+for data in cur.fetchall():
+    print data
 ```
 
 ...
@@ -102,8 +97,9 @@ import pymongo
 conn = pymongo.MongoClient('mongodb://localhost:27017')  # 连接服务器
 db = conn.test  # 选择数据库
 tbl = db.tbl  # 选择集合
-doc = tbl.find_one()
-print doc
+cur = tbl.find()
+for doc in cur:
+    print doc
 ```
 ....
 

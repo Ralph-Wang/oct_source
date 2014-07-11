@@ -36,27 +36,27 @@
 <body class="deck-container">
 
 <section class="slide"><h1>NoSQL 数据库 <br> MongoDB  <br> II</h1>
-<p>2014 - 07, @MyTesting</p></section><section class="slide"><h2>我是谁? Who am I?</h2>
-<h4>网秦广告平台 QA, 花名 @_漏斗</h4>
+<p>2014-07, @MyTesting</p></section><section class="slide"><h2>我是谁? Who am I?</h2>
+<h3>网秦广告平台 QA, 花名 @_漏斗</h3>
 <hr />
-<p>GitHub: @<a href="https: // github.com / Ralph - Wang">Ralph - Wang</a></p>
-<p>Blog: <http: //ralph - wang.github.io ></p>
+<p>GitHub: @<a href="https://github.com/Ralph-Wang">Ralph-Wang</a></p>
+<p>Blog: <a href="http://ralph-wang.github.io">http://ralph-wang.github.io</a></p>
 <p>Weibo: @_漏斗</p>
 <blockquote>
 <p>嘁, 打个酱油</p>
 </blockquote></section><section class="slide"><h2>大纲 Syllibus</h2>
-<h3>1. 关系型数据库与 NoSQL (Part I)</h3>
+<h4>1. 关系型数据库与 NoSQL (Part I)</h4>
 <ul>
 <li>什么是数据库</li>
 <li>关系型数据库</li>
 <li>NoSQL 数据库</li>
 </ul>
-<h3>2. MongoDB 基础 (Part I)</h3>
+<h4>2. MongoDB 基础 (Part I)</h4>
 <ul>
 <li>为什么独爱 MongoDB</li>
 <li>MongoDB 基本使用</li>
 </ul>
-<h2>3. 在 Python 中使用 MongoDB</h2>
+<h3>3. 在 Python 中使用 MongoDB</h3>
 <ul>
 <li>在 Python 中使用 MongoDB</li>
 <li>一个简单的项目(带单元测试)</li>
@@ -79,24 +79,20 @@ for i in range(10):
                "list": [1, 2, 3]}</code></pre></section><section class="slide"><h2>像 RDBMS 一样? Just Like RDBMS?</h2>
 <h3>拼接字符串?</h3>
 <pre><code>import MySQLdb
-def connect_to_MySQL()
-    conn =  # connect object to MySQL
-        return conn
-try:
-    conn = connect_to_MySQL()
-    cur = conn.cursor()
-    cur.execute('select * from user where name=' % name)  # 查询用户
-    cur.close()
-    conn.close()
-except MySQLdb.Error:
-    print "oops, mysql error"</code></pre></section><section class="slide"><h2><a href="http://api.mongodb.org/">原生 API Native Api</a></h2>
+conn = MySQLdb.connect(host='localhost', db='test')
+cur = conn.cursor()
+sql = 'select id, name from tbl where id=%s'
+cur.execute(sql, 1)  # 查询数据
+for data in cur.fetchall():
+    print data</code></pre></section><section class="slide"><h2><a href="http://api.mongodb.org/">原生 API Native Api</a></h2>
 <h1>怎么可能!?</h1>
 <pre><code>import pymongo
 conn = pymongo.MongoClient('mongodb://localhost:27017')  # 连接服务器
 db = conn.test  # 选择数据库
 tbl = db.tbl  # 选择集合
-doc = tbl.find_one()
-print doc</code></pre></section><section class="slide"><h2>一个实例 A Simple Project</h2>
+cur = tbl.find()
+for doc in cur:
+    print doc</code></pre></section><section class="slide"><h2>一个实例 A Simple Project</h2>
 <h3><a href="https://github.com/Ralph-Wang/qboard">qboard</a></h3>
 <p>目录结构</p>
 <pre><code>.
