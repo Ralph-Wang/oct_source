@@ -113,7 +113,7 @@ delete from tbl where id = 11;
 var name = "Ralph-Wang";
 var age = 25;
 if (1 === 2) {
-	age =20;
+	age = 20;
 }
 var sum = 0;
 for (var i=0; i < 10; i++) {
