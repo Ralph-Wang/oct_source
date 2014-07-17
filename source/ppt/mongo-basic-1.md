@@ -215,7 +215,7 @@ db.collection.find({$and [{age : {$gt : 22}}, {age : {$lt : 30}}]};
 db.collection.find({$or : [{age : {$gt : 30}}, {age : {$lt : 22}}]});
 ```
 
-* 排序/跳过/限制 sort/skip/limit
+* 排序/跳过/限量 sort/skip/limit
 
 ```
 db.collection.find().sort({age : 1});

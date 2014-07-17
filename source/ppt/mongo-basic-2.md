@@ -80,7 +80,7 @@ dict_sample = {"key": "value",
 import MySQLdb
 conn = MySQLdb.connect(host='localhost', db='test')
 cur = conn.cursor()
-sql = 'select id, name from tbl where id=%s'
+sql = 'select id, name from tbl where id = %s'
 cur.execute(sql, 1)  # 查询数据
 for data in cur.fetchall():
     print data
@@ -90,6 +90,8 @@ for data in cur.fetchall():
 
 ## [原生 API Native Api](http://api.mongodb.org/)
 
+* find\_one 直接返回查询对象
+
 # 怎么可能!?
 
 ```
@@ -97,11 +99,41 @@ import pymongo
 conn = pymongo.MongoClient('mongodb://localhost:27017')  # 连接服务器
 db = conn.test  # 选择数据库
 tbl = db.tbl  # 选择集合
-cur = tbl.find()
+print tbl.find_one()
+```
+....
+## 带上查询条件 With Query
+
+* find 方法返回的是一个游标对象
+* 使用 for 循环迭代出查询结果
+
+```
+import pymongo
+conn = pymongo.MongoClient('mongodb://localhost:27017')
+db = conn.test # 选择数据库
+tbl = db.tbl # 选择集合
+query = {'name' : 'ralph'}
+cur = tbl.find(query)
 for doc in cur:
     print doc
 ```
-....
+...
+## 排序和限量 Sort & limit
+
+* 只有使用 for 迭代结果时, 游标才去 MongoDB 执行查询
+
+```
+import pymongo
+conn = pymongo.MongoClient('mongodb://localhost:27017')
+db = conn.test # 选择数据库
+tbl = db.tbl # 选择集合
+cur = tbl.find()
+cur.sort({'age' : pymongo.ASCENDING})
+cur.limit(1)
+for doc in cur:
+    print doc
+```
+...
 
 ## 一个实例 A Simple Project
 
