@@ -48,7 +48,7 @@ def get_file_content_safely(filename):
 
 def render_section(section):
     '''render_section: render a section'''
-    md = markdown.Markdown(extensions=['tables'])
+    md = markdown.Markdown(extensions=['tables','nl2br'])
     html = md.convert(section)
     _wrapper = get_file_content_safely(SECTION_WRAPER_FILE)
     try:
