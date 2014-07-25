@@ -3,10 +3,10 @@ layout: post
 title: "从 vim 转到 emacs"
 date: 2014-07-25 21:24:43 +0800
 comments: true
-keywords: 
-description: 
-tags: 
-categories: 
+keywords: [Emacs, Vim, Editor, hacking]
+description: Emacs is a better editor
+tags: [Emacs, Vim, Editor]
+categories: Emacs
 ---
 
 
