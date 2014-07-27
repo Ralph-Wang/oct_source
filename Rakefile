@@ -4,7 +4,7 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-editor         = "vim"
+editor         = "emacs"
 ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"

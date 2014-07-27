@@ -34,7 +34,7 @@ emacs 提供了很好的帮助+练习文档 `M-x help-with-tutorial`
 * 保存及退出: C-x C-s, C-x C-c
 * 删除: C-d, Delete/BackSpace, M-d, M-Delete, C-k, M-k
 * 粘贴(yank): C-y, M-y
-* Undo/Redo: C-x u, C-_ , `C-g` C-_. ( `C-g` 可以用任意非编辑命令代替
+* Undo/Redo: C-x u, C-\_ , `C-g` C-\_. ( `C-g` 可以用任意非编辑命令代替
 * Buffer: C-x C-b, C-x b [buffer]
 * 窗口: C-x 1
 * goto: M-x goto-line
