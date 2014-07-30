@@ -34,7 +34,7 @@ do
 	esac
 done
 
-shift $(($OPTINT - 1))
+shift $(($OPTIND - 1))
 
 main scripts
 ```
@@ -42,7 +42,7 @@ main scripts
   如果字符后面加有冒号(:)则表示该选项有对应的选项参数,
   参数值会保存到变量`OPTARG`中
 
-* 执行过 getopt 后, 会在变量`OPTINT`中保存 (选项+选项参数) 的总个数. 用 shift $(($OPTINT - 1)) 来确保后续代码不受实际选项个数影响
+* 执行过 getopt 后, 会在变量`OPTIND`中保存 (选项+选项参数) 的总个数. 用 shift $(($OPTIND - 1)) 来确保后续代码不受实际选项个数影响
 
 * 在声明所支持的选项时, 如果以冒号(:)开头, 可以忽略传入不合法的选项
 
