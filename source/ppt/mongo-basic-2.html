@@ -117,7 +117,18 @@ cur = tbl.find()
 cur.sort({'age' : pymongo.ASCENDING})
 cur.limit(1)
 for doc in cur:
-    print doc</code></pre></section><section class="slide"><h2>一个实例 A Simple Project</h2>
+    print doc</code></pre></section><section class="slide"><h2>插入数据的一个坑 A Trick On Insert</h2>
+<ul>
+<li>完成 insert 后, 原 dict 对象改变</li>
+</ul>
+<pre><code>import pymongo
+conn = pymongo.MongoClient('mongodb://localhost:27017')
+db = conn.test # 选择数据库
+tbl = db.tbl # 选择集合
+doc = {'name' : 'just insert', value : '-1'}
+print doc
+tbl.insert(doc)
+print doc</code></pre></section><section class="slide"><h2>一个实例 A Simple Project</h2>
 <h3><a href="https://github.com/Ralph-Wang/qboard">qboard</a></h3>
 <p>目录结构</p>
 <pre><code>.

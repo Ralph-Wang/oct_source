@@ -135,6 +135,22 @@ for doc in cur:
 ```
 ...
 
+## 插入数据的一个坑 A Trick On Insert
+
+* 完成 insert 后, 原 dict 对象改变
+
+```
+import pymongo
+conn = pymongo.MongoClient('mongodb://localhost:27017')
+db = conn.test # 选择数据库
+tbl = db.tbl # 选择集合
+doc = {'name' : 'just insert', value : '-1'}
+print doc
+tbl.insert(doc)
+print doc
+```
+
+...
 ## 一个实例 A Simple Project
 
 ### [qboard](https://github.com/Ralph-Wang/qboard)
