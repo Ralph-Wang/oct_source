@@ -36,12 +36,9 @@ category_title_prefix: "分类: "
 category_dir: /blog/categories
 tag_dir: /tags
 tag_title_prefix: "标签: "
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
+markdown: kramdown
+kramdown:
+  toc_levels: 2..3
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 6          # Posts per page on the blog index
@@ -53,7 +50,7 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [custom/asides/weibo.html, custom/asides/recent_posts.html, custom/asides/category_list.html, custom/asides/tags.html, custom/asides/recent_comments.html, custom/asides/douban.html]
+default_asides: [custom/asides/weibo.html, custom/asides/recent_posts.html, custom/asides/category_list.html, custom/asides/tags.html, custom/asides/recent_comments.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.

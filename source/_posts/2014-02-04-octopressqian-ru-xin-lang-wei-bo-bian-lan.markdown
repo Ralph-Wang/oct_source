@@ -17,6 +17,7 @@ categories: octopress
 微博提供的一个小工具。点[这里](http://weibo.com/tool/weiboshow)查看。
 
 从这个工具可以得到一个`iframe`片段如下：
+
 ```html weiboshow
 <iframe width="100%" height="550" class="share_self"  frameborder="0"
 	scrolling="no"
@@ -35,9 +36,11 @@ categories: octopress
 	verifier={{yourVerifier}}&
 dpc=1"></iframe>
 ```
+
 src中的链接，就是微博秀的页面。
 
 改造一下，变成`octopress`的边栏片段：
+
 ```html weibo.html
 {% if site.weibo_uid %}
 <section class="well">
@@ -64,20 +67,25 @@ src中的链接，就是微博秀的页面。
 </section>
 {% endif %}
 ```
+
 将这个文件保存到`custom/asides`目录下，并在`_config.yml`中的`default_asides`列表中添加`custom/asides/weibo.html`。
+
 ```yml _config.yml
 default_asides: [custom/asides/weibo.html, custom/asides/category_list.html, custom/asides/recent_posts.html]
 ...
+
 # Weibo
 weibo_uid: 1854716251
 weibo_verifier: verifier
 ```
 
 接下来
+
 ```bash
 rake generate
 rake preview
 ```
+
 访问`localhost:4000`查看一下效果。
 
 注： `default_asides`列表中各页面的顺序就是边栏显示的顺序
@@ -87,6 +95,7 @@ rake preview
 我在使用微博秀的过程中并不稳定，有时显示，有时不显示。不显示的时候直接访问URL又是有效的。
 
 于是换一种方式, 新的`weibo.html`
+
 ```html weibo.html
 {% if site.weibo_uid %}
 <section class="well">

@@ -22,6 +22,7 @@ categories: nodejs
 光看结果还是不太信服, 于是来做个验证.
 
 先上源码:
+
 ```javascript server1.js
 var http = require('http');
 
@@ -62,6 +63,7 @@ server1 和 server2 的差别就只有那一句 `helloworld = new Buffer(hellowo
 现在分别启动 server1 和 server2
 
 并用 ab 测试, 同时将结果分别保存到 res1.txt 和 res2.txt
+
 ```bash
 ab -c 200 -t http://100 10.161.130.110:8888/ > res1.txt
 ab -c 200 -t http://100 10.161.130.110:8888/ > res2.txt

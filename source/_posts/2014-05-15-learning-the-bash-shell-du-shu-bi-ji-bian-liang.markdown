@@ -93,6 +93,7 @@ echo ${theVar:?"should not be empty"}
 ```
 
 输出:
+
 ```
 minus
 
@@ -105,6 +106,7 @@ sample3.sh: line 15: theVar: should not be empty
 
 ## 一个练习
 你收集了一专辑, 并已经统计出了不同歌手的专辑数量, 现在需要找出收集数量前 10 的歌手. 文件格式如下:
+
 ```text file
 5 Depeche Mode
 2 Split Enz
@@ -115,6 +117,7 @@ sample3.sh: line 15: theVar: should not be empty
 ok, 实现代码很简单 `sort -nr file | head -n 10`
 
 不过, 书中的解答不得不说更好
+
 ```bash
 #!/bin/bash
 

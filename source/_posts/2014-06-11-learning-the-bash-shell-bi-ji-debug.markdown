@@ -21,6 +21,7 @@ bash 脚本自然也不能免俗
 时可以帮助我们查看脚本是执行到哪一行出现的问题
 
 如果想让 bash 脚本运行时显示每行命令, 则需要在脚本开始添加如下命令:
+
 ```bash
 set -o [noexec|verbose|xtrace]
 ```
@@ -88,6 +89,7 @@ execute 5
 
 ### ERR
 当有命令执行后的返回值不是 0 时触发该信号
+
 ```bash err.sh
 #!/bin/sh
 
@@ -100,7 +102,9 @@ function bad
 
 bad
 ```
+
 执行结果
+
 ```bash
 $./err.sh
 Error with status 111
@@ -110,9 +114,11 @@ Error with status 111
 当用 `source` 执行脚本返回后触发该信号
 
 若执行 `set -o functrace`, 则函数返回后也能触发该信号
+
 ```bash x.sh
 echo "Hello World"
 ```
+
 ```bash return.sh
 #!/bin/sh
 trap 'echo debug occured' DEBUG
@@ -120,7 +126,9 @@ trap 'echo return occured' RETURN
 
 source ./x.sh
 ```
+
 执行结果
+
 ```bash
 debug occured
 Hello World
@@ -187,6 +195,7 @@ _debugfile=$_tmpdir/bashdb.$$ # tmp file for script debugged
 cat $_libdir/bashdb.pre $_guineapig > $_debugfile
 exec bash $_debugfile $_guineapig $_tmpdir $_libdir "$@"
 ```
+
 > 关于 `exec` 命令
 > > 执行其参数, 用其并替代当前进程. 脚本中在 `exec` 后的命令都不会执行
 > > 在 cli 中执行 exec 后... 当前 shell 会直接退出

@@ -44,6 +44,7 @@ bash 中测试有两种写法
 两种写法是等价的, 详细的写法可参考 `man test`
 
 ## if..elif..else
+
 ```bash
 if condition
 then
@@ -57,6 +58,7 @@ fi
 ```
 
 ## case
+
 ```bash
 case epxr in
 	pattern1 )
@@ -75,6 +77,7 @@ esac
 因为匹配是从上到下的, 所以可以用 `*)` 来表示 default
 
 ## select
+
 ```bash
 select case [in caselist]
 do
@@ -82,6 +85,7 @@ do
 	[break]
 done
 ```
+
 用 caselist 里的所有项生成一个简单的选择菜单
 
 statements 中 $case 就是选择的项
@@ -89,11 +93,13 @@ statements 中 $case 就是选择的项
 完成一次 statements 后, 若没有遇到 break 则会继续下一次 select
 
 ## for
+
 ```bash
 for ((expr1;expr2;expr3))
 	statements
 end
 ```
+
 这个比较类似 Java 里的 for
 
 ```bash
@@ -102,6 +108,7 @@ do
 	statements
 done
 ```
+
 这个感觉更像 python 里的 for
 
 若省略 [in list] 的话, 则默认从 $@ 中取值
@@ -115,6 +122,7 @@ done
 bash 4.0 以上才有的语法
 
 ## while & until
+
 ```bash
 while condition
 do
@@ -128,12 +136,14 @@ do
 	statements
 done
 ```
+
 while condition 等价于 until ! condition
 
 两者没有其它区别
 
 ## 附:
 又一个友好地显示 PATH 的方法
+
 ```bash showpath.sh
 path=$PATH
 

@@ -25,9 +25,11 @@ categories: java
 要让**jvisualvm**成功连接到被监控机器上，需要在/etc/hosts文件中将被监控机的主机名绑定到被监控机的IP地址。
 
 通过`hostname`命令可以获得主机名
+
 ```text /etc/hosts
 192.168.192.132 Ralph.Wang
 ```
+
 `hostname -i`返回实际的IP地址即绑定成功。
 
 
@@ -40,6 +42,7 @@ categories: java
 {% gist 8844076 jstatd.all.policy %}
 
 运行`jstatd`时需要用`-J-Djava.security.policy`参数指定策略文件
+
 ```bash
 jstatd -J-Djava.security.policy=jstatd.all.policy
 ```

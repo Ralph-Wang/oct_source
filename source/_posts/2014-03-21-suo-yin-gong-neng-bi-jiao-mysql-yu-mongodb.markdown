@@ -20,6 +20,7 @@ categories: 数据库
 索引总是建立在字段上的, 所以我们这里做准备一张简单的表, 并做一些简单的数据.
 
 MySQL 怎么建表, 插数据就不多说了
+
 ```mysql
 -- 建表
 CREATE TABLE tbl (
@@ -71,6 +72,7 @@ CREATE INDEX idx_value ON tbl (value)
 ```
 
 MongoDB 则只留出了一个 createIndex 的接口来创建索引
+
 ```javascript
 db.tbl.createIndex({value : 1})
 ```
@@ -79,6 +81,7 @@ db.tbl.createIndex({value : 1})
 如果集合名或字段字敲错了, mongoshell 可不会报错.
 
 在 mongoshell 中有一个助手方法, `ensureIndex`
+
 ```javascript
 >db.tbl.ensureIndex
 function ( keys , options ){
@@ -90,6 +93,7 @@ function ( keys , options ){
 	// nothing returned on success
 }
 ```
+
 可以看到, 其实 `ensureIndex` 仍然通过调用 `createIndex` 来完成索引创建
 
 > 其实像 nodejs 或 python 中 MongoDB 的建立索引的接口名称都使用的 ensure. 而不是
@@ -112,6 +116,7 @@ db.tbl.getIndexes();
 ### 删除索引.
 
 在 MySQL 中删除索引时, 和创建一样可以用 `ALTER TABLE` 或 `DROP INDEX` 两种方法
+
 ```mysql
 -- ALTER TABLE 式
 ALTER TABLE tbl DROP INDEX idx_value;
@@ -121,6 +126,7 @@ DROP INDEX idx_value ON tbl;
 
 而 MongoDB 则是允许用 `dropIndexes` 一次性删除全部索引, 也可以用 `dropIndex`
 删除指定索引
+
 ```javascript
 // 删除全部索引
 db.tbl.dropIndexes();
@@ -167,16 +173,19 @@ type 字段中的 `ALL` 就表示了这次查询是全表扫描, 而 key\_len �
 现在, 把索引建立起来, 看看相同查询的执行计划.
 
 MySQL 使用索引查询时的执行计划
+
 ```mysql
 | id | select_type | table | type | possible_keys | key       | key_len | ref   | rows | Extra       |
 |  1 | SIMPLE      | tbl   | ref  | idx_value     | idx_value | 5       | const |    1 | Using where |
 ```
+
 type 显示为 `ref`, 说明是在使用一般索引查询( 若使用主键索引, 则显示为 `const`)
 rows 字段由之前的 5 变为 1, 扫描行数变少了.
 key, key\_len 说明了使用了什么索引以及这个索引有多长
 
 
 MongoDB
+
 ```javascript
 {
 	"cursor" : "BtreeCursor value_1",
@@ -187,6 +196,7 @@ MongoDB
 	// 其它字段
 }
 ```
+
 cursor 值为 `BtreeCursor value_1`, 表示使用了名为 `value_1` 的索引进行查询
 nscannedObjects 表示最终结果中查询过的对象数, 使用索引之前为 5, 现在变为 1.
 
@@ -198,6 +208,7 @@ MySQL 和 MongoDB 中都有这样一个特性:
 不会再进行实表查找
 
 MySQL 中, 如果出现这样的情况, 会在 Extra 字段中显示 `using index` 信息, 如下
+
 ```mysql
 mysql> explain select value from tbl where value = 1;
 | id | select_type | table | type | possible_keys | key       | key_len | ref   | rows | Extra                    |
@@ -232,6 +243,7 @@ mysql> explain select value from tbl where value = 1;
 这点是 MySQL 所不具备的
 
 直接上执行计划.
+
 ```javascript
 > db.tbl.find().sort({value : 1}).explain()
 {
@@ -262,6 +274,7 @@ mysql> explain select value from tbl where value = 1;
 		"server" : "AY14031520284347468cZ:27017"
 }
 ```
+
 可以看到, 没有任何查询条件, 只进行排序确实是使用了索引.
 
 不同的是, 在 `indexBounds` 中对索引字段 value 的查找范围是从 $minElement 到 $maxElement. 
@@ -271,11 +284,13 @@ mysql> explain select value from tbl where value = 1;
 都提供了强制使用索引的方法.
 
 MySQL 中 使用 use index 子句
+
 ```mysql
 select * from tbl use index (idx_value);
 ```
 
 MongoDB 中则使用 hint 方法
+
 ```javascript
 db.tbl.find().hint({value : 1});
 ```

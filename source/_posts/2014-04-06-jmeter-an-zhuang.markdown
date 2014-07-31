@@ -18,12 +18,14 @@ categories: Jmeter
 如果没有特别要求, 下载最新版就可以.
 
 完成安装后配置上相应的环境变量
+
 ```bash
 JAVA_HOME=/where/you/install/jdk
 CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 ```
 
 可以用下面代码测试安装成功与否
+
 ```java Test.java
 import java.util.Date;
 
@@ -45,16 +47,14 @@ public class Test {
 
 > 配置 Jmeter 环境变量
 
-> JMETER_HOME=/where/you/put/apache-jmeter-*.*
+```bash
+JMETER_HOME=/where/you/put/apache-jmeter-*.*
+CLASSPATH=$CLASSPATH:$JMETER_HOME/lib/logkit-2.0.jar:$JMETER_HOME/lib/jorphan.jar:$JMETER_HOME/lib/ext/ApacheJMeter_core.jar
+```
 
-> CLASSPATH=$CLASSPATH:$JMETER_HOME/lib/logkit-2.0.jar:$JMETER_HOME/lib/jorphan.jar:$JMETER_HOME/lib/ext/ApacheJMeter_core.jar
-
-> 其实就是在 `CLASSPATH` 中添加三个 jar 包:
-
-> $JMETER\_HOME/lib/logkit-2.0.jar
-
-> $JMETER\_HOME/lib/jorphan.jar
-
+> 其实就是在 `CLASSPATH` 中添加三个 jar 包: *(07-31更新: 可以不用配置)*
+> $JMETER\_HOME/lib/logkit-2.0.jar   
+> $JMETER\_HOME/lib/jorphan.jar   
 > $JMETER\_HOME/lib/ext/ApacheJMeter\_core.jar
 
 

@@ -47,6 +47,7 @@ categories: LoadRunner
 我们先来看请求发出的信息. 首先从请求体里面找
 
 请求体是 `json` 格式的, 如下
+
 ```javascript
 {   "userName":"www2",
 	"password":"www2",
@@ -58,6 +59,7 @@ categories: LoadRunner
 	"groups":[]
 }
 ```
+
 `userName` 是用户名, `password` 是用户密码, `firstName` 是名字, `lastName`
 是姓氏, `email` 是邮箱, `disableAccount` 是禁用选项, `quota` 是分配容量, `groups` 是用户所在组
 
@@ -95,6 +97,7 @@ decodeURIComponent('NPizHL2EuHsHN6VMml0sAfezFhPQmT5fynjkx%2fkqP88%3d')
 ### 解决方案
 
 添加以下代码
+
 ```c
 web_reg_save_param("token",
 		"LB=CSRFToken=",
@@ -110,6 +113,7 @@ web_add_header("Alfresco-CSRFToken", url_decode(lr_eval_string("{token}")));
 // submit requests codes
 ...
 ```
+
 TIPS:
 
 * 由于不能直接在请求中添加请求头信息, 所以我们需要调用 `web_add_header`
@@ -123,6 +127,7 @@ TIPS:
 [http://blog.csdn.net/womengdoushizhongguo/article/details/8517598](http://blog.csdn.net/womengdoushizhongguo/article/details/8517598)
 
 于是, 新增的代码可以修改为
+
 ```c
 web_reg_save_param("token",
 		"LB=CSRFToken=",
@@ -139,9 +144,12 @@ web_add_header("Alfresco-CSRFToken", lr_eval_string("{token}"));
 ...
 // submit requests codes
 ```
+
 ## 02.24 更新
+
 --------
 --------
+
 再往深了想一下, 如果前端通过某种自定义的算法加密的验证信息再返回系统.
 
 那没有开发配合, 这脚本还真没法完成了.

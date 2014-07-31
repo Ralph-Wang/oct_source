@@ -16,6 +16,7 @@ categories: Linux
 用 `echo` 直接显示时, 输出只有一行, 查看起来很费神
 
 如下图
+
 ```bash
 $echo $PATH
 ```
@@ -33,8 +34,10 @@ $echo $PATH | awk 'BEGIN {RS=":"} {print $0}'
 确实清晰不少.
 
 ----------
+
 #### 2014-05-11 更新
 今天才发现, 其实有更简单的办法... Orz
+
 ```bash
 echo $PAHT |tr : '\n'
 ```

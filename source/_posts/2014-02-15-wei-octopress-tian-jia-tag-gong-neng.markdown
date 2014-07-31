@@ -14,6 +14,7 @@ categories: octopress
 
 诚如 `alswlx` 在 [给 octopress 加上标签功能](http://blog.log4d.com/2012/05/tag-cloud/)
 描述的那样:
+
 ```
 分类 和 标签 分别代表了 有序/无序 两种不同的知识归纳方法.
 一篇文章只会属于一个分类, 但可以同时拥有多个标签.

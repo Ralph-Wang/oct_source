@@ -96,6 +96,7 @@ mysql> show variables like 'long%';
 ```
 
 * 在 my.cnf 中配置开启慢查询跟踪
+
 ```ini my.cnf
 [mysqld]
 log-slow-queries = **** # 日志存放目录, 一般放到 MySQL 数据库的地方

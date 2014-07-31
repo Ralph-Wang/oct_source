@@ -22,6 +22,7 @@ categories: octopress
 * 并且只有`<!--more-->`前的内容人显示到首页
 
 像这样
+
 ```
 上一篇博客比较长，发现首页居然照样显示了全文
 
@@ -41,6 +42,7 @@ categories: octopress
 
 
 修改`Rakefile`，使写新文章时自动添加一个`<!--more-->`
+
 ```ruby Rakefile
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"

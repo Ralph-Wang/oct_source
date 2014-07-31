@@ -15,9 +15,11 @@ categories: Linux
 查看 CPU 型号及数量
 -----------
 原命令
+
 ```bash
-#cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
+cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
 ```
+
 cat 和 grep 就不多说了
 ### cut:
 help 中的说明是 ** Print selected parts of lines from each FILE to standard
