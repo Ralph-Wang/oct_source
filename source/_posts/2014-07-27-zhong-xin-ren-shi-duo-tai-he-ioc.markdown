@@ -6,7 +6,7 @@ comments: true
 keywords: [多态, IoC, 面向对象, 程序设计]
 description: 一种独特的方式来认识多态和 IoC
 tags: 程序设计, IoC, 多态
-categories: 程序设计
+categories: 程序设计与算法
 ---
 
 起源 <http://weibo.com/1854716251/BfnE2jSR9>
