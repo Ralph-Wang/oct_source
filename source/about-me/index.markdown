@@ -1,7 +1,7 @@
 ---
 layout: page
 navbar: About
-title: "关于我"
+title: "这个逗[哔]"
 date: 2014-01-30 15:13
 comments: true
 sharing: true
@@ -22,37 +22,28 @@ void main()
 }
 ```
 
+### Hi
+
+Hi, 我叫逗...咳~我叫_漏斗.
+
+没了...
+
 ### 一则拙劣的广告
 
 访问 Google 各项服务的强大工具: [云梯](http://ugetvpn.com/?r=694b573a7aadd55a)
 
 用上面的链接访问可以为你和我各省 10 元
 
-### 我是?
-
-会写代码的逗\[哔\]
-
-逗些啥?  
-
-* 开发语言 : Python, NodeJS, Java...    
-* 脚本     : MS batch, Shell ...
-* 数据库   : MySQL, MongoDB, SQL Server ...    
-* 持续集成 : Jenkins ...    
-* 测试工具 : WebDriver(Java, Python) , QTP, LR, JMeter...
-
-没有程序员不会的, 只有还没学的
-
-more keyboard, less mouse.
 
 ### 我需要你的帮助
 
 如果发现文章中有错误，不管是**概念**、**用词**、**错别字**亦或是其它**任何**问题，欢迎拍砖
 
-#### 联系方式
+### 联系方式
 
 邮箱: ralph\_ld#aliyun.com (每天都会收邮件)
 
-QQ: 182307203 (即使在线也不一定秒回, 不带耳机完全不知道有消息)
+QQ: 182307203
 
 old\_blogs: [\_漏斗的博客园](http://www.cnblogs.com/Ralph-Wang/)
 
