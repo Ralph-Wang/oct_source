@@ -6,7 +6,7 @@ comments: true
 keywords: LoadRunner, 性能测试, 性能, 关联, 参数化, Headers, urlEncode, LR
 description: LoadRunner 开发 Alfresco 创建用户脚本实例, 遇到的关联问题及解决思路
 tags: [LoadRunner, 性能测试, 脚本开发, 关联]
-categories: LoadRunner
+categories: 测试工具
 ---
 
 遇到一个比较特别的关联的例子. 

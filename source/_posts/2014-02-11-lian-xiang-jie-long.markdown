@@ -6,7 +6,7 @@ comments: true
 keywords: 思维导图, 思维训练, 想象力, 自由联想, 记忆力
 description: 用 思维导图 训练中的 自由联想 训练
 tags: [思维导图, 思维训练, 想象力]
-categories: 思维导图
+categories: 其它
 ---
 
 `你的第一本思维导图操作书`中`自由联想练习`的第一个练习方法

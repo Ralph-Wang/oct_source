@@ -6,7 +6,7 @@ comments: true
 keywords: 测试, 工具, Jmeter, 安装
 description: 测试工具 Jmeter 安装
 tags: [Jmeter, 安装, 工具]
-categories: Jmeter
+categories: 测试工具
 ---
 
 跨平台工具赛高

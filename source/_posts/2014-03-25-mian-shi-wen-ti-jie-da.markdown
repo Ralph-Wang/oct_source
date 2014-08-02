@@ -6,7 +6,7 @@ comments: true
 keywords: 面试, Java, Linux, MySQL, 算法
 description: 面试时遇到的一些问题, 当时没有完全答上来的
 tags: [面试, Java, Linux, MySQL, 算法]
-categories: 面试
+categories: 其它
 ---
 
 面试时没有完全回答上或有存疑的问题

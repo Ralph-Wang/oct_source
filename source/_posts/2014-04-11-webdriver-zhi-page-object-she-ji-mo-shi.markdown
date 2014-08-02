@@ -6,7 +6,7 @@ comments: true
 keywords: selenium, webdriver, Page Object, 设计模式, 自动化测试
 description: 使用 Page Object 进行 webdriver 自动化测试
 tags: [webdriver, selenium, python, 自动化测试, 设计模式]
-categories: Selenium
+categories: 测试工具
 ---
 
 使用 Selenium Webdriver 最常用的设计模式 Page Object 规划页面
