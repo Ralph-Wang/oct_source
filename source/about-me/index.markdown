@@ -9,7 +9,9 @@ footer: true
 
 ---
 
-```c just a segment
+
+### Just A Segment
+```c 
 #include <stdio.h>
 
 void main()
@@ -24,7 +26,7 @@ void main()
 
 ### Hi
 
-Hi, 我叫逗...咳~我叫_漏斗.
+Hi, 我叫逗...咳~我叫\_漏斗.
 
 没了...
 
@@ -45,5 +47,5 @@ Hi, 我叫逗...咳~我叫_漏斗.
 
 QQ: 182307203
 
-old\_blogs: [\_漏斗的博客园](http://www.cnblogs.com/Ralph-Wang/)
+以前的博客: [\_漏斗的博客园](http://www.cnblogs.com/Ralph-Wang/)
 
