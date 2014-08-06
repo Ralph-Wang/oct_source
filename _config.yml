@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://ralph-wang.github.io
-title: Test Notes By _漏斗
-subtitle: Linux, DB, Scrtipts -- Write as a Hacker.
+title: 挨踢夜归人
+subtitle: Write as a Doubi.  ╮(￣▽ ￣)╭
 author: _漏斗
 simple_search: http://google.com/search
 description:
@@ -75,10 +75,3 @@ baidu_share: true
 
 # duoshuo
 duoshuo_shortname: ralph-wang
-
-## douban
-douban_domain: ralph_ld
-douban_n: 9
-douban_col: 3
-douban_selection: random
-douban_picsize: small
