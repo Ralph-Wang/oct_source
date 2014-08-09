@@ -9,9 +9,10 @@ import codecs
 TAG_FOR_WRAP = '{{{slides}}}'
 WRAP_FILE = './resources/wrap.html'
 SECTION_WRAPER_FILE = './resources/section.html'
-SECTION_SPLIT_PATTERN = re.compile('\.{3,}')
+SECTION_SPLIT_PATTERN = re.compile(r'\.{3,}')
 HTML_TAG_PATTERN = re.compile('<.*?>')
 TITLE_PATTERN = re.compile('<h1>(.*?)</h1>')
+SUBSLIDE_PATTERN = re.compile(r'<(?P<tag>.*?)>;')
 
 
 def usage():
@@ -48,7 +49,7 @@ def get_file_content_safely(filename):
 
 def render_section(section):
     '''render_section: render a section'''
-    md = markdown.Markdown(extensions=['tables','nl2br'])
+    md = markdown.Markdown(extensions=['tables', 'nl2br'])
     html = md.convert(section)
     _wrapper = get_file_content_safely(SECTION_WRAPER_FILE)
     try:
@@ -57,9 +58,14 @@ def render_section(section):
         result = _wrapper
         print 'missing `%%s` in `%s`' % WRAP_FILE
 
+
     # re tag codes
     result = result.replace('<p><code>', '<pre><code>')\
         .replace('</code></p>', '</code></pre>')
+
+
+    # render subslide
+    result = SUBSLIDE_PATTERN.sub(r'<\g<tag> class="slide">', result)
     # print result
     return result
 
