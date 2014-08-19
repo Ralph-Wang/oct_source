@@ -9,7 +9,11 @@ tags: [程序设计, IoC, 多态]
 categories: 程序设计与算法
 ---
 
-起源 <http://weibo.com/1854716251/BfnE2jSR9>
+## 起源
+
+源自一则微博:
+
+详情戳[这里](http://weibo.com/1854716251/BfnE2jSR9)
 
 <!--more-->
 
