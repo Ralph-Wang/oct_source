@@ -1,42 +1,35 @@
 ---
 layout: default
-navbar: Blog
 ---
-
-<div class="row">
-  <div class="page-content {% unless site.default_asides == empty and site.blog_index_asides == empty %}col-md-8{% else %}col-md-12{% endunless %}">
-    <div class="blog-index">
-      {% assign index = true %}
-      {% for post in paginator.posts %}
-      {% assign content = post.content %}
-        <article class="post">
-          {% include article.html %}
-        </article>
-      {% endfor %}
-    </div>
-
-    <ul class="pager">
-      {% if paginator.next_page %}
-        <li class="previous"><a href="{{paginator.next_page}}">&larr;&nbsp;Older</a></li>
-      {% else %}
-        <li class="previous disabled"><a href="#">&larr;&nbsp;Older</a></li>
-      {% endif %}
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      {% if paginator.previous_page %}
-        <li class="next"><a href="{{paginator.previous_page}}">Newer&nbsp;&rarr;</a></li>
-      {% else %}
-        <li class="next disabled"><a href="#">Newer&nbsp;&rarr;</a></li>
-      {% endif %}
-    </ul>
-  </div>
-
-  {% unless site.default_asides == empty and site.blog_index_asides == empty %}
-    <aside class="sidebar col-md-4">
-      {% if site.blog_index_asides.size %}
-        {% include_array blog_index_asides %}
-      {% else %}
-        {% include_array default_asides %}
-      {% endif %}
-    </aside>
-  {% endunless %}
-</div>
+<section class="content">
+	<div class="content-cnt fn-clear">
+		<div class="main fn-clear">
+			{% for rpost in paginator.posts %}
+            	<article class="main-excerpt fn-clear">
+                    <h3 class="main-excerpt-title"><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark">{{ rpost.title }}</a></h3>
+                    <p class="date"><time pubdate="{{ rpost.date }}">{{ rpost.date | date_to_string }}</time></p>
+                    <p>{{ rpost.description }}</p>
+                   	<p class="more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow"><span>&#10149;</span>Read More</a></p>
+                </article>
+            {% endfor %}
+            {% if paginator.total_pages > 1 %}
+		        <nav id="pagination">
+		            <ul class="pagination">
+		                {% for page in (1..paginator.total_pages) %}
+		                    {% if page == paginator.page %}
+		                        <li class="current"><a href="javascript:void(0);">{{ page }}</a></li>
+		                    {% else %}
+		                        <li><a href="/{%if page > 1 %}page{{ page }}/{% endif %}">{{ page }}</a></li>
+		                    {% endif %}
+		                {% endfor %}
+		            </ul>
+		        </nav>
+		    {% endif %}			
+		</div>
+		<div class="aside fn-clear">
+			{% include wg-contact.html %}
+			{% include wg-project.html %}
+			{% include wg-other.html %}
+		</div>
+	</div>
+</section>
