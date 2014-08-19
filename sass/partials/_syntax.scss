@@ -16,7 +16,6 @@ figcaption + .highlight {
   font-size: 13px;
   line-height: 1.45em;
   @if $solarized == light {
-    background: lighten($base03, 1) $noise-bg !important;
     border-right: 1px solid darken($base02, 2) !important;
     @include box-shadow(lighten($base03, 2) -1px 0 inset);
     text-shadow: lighten($base02, 2) 0 -1px;
@@ -112,7 +111,6 @@ html .gist .gist-file {
   padding: .8em;
   overflow-x: auto;
   line-height: 1.45em;
-  background: $base03 $noise-bg !important;
   color: $base1 !important;
   span { color: $base1 !important; }
   span { font-style: normal !important; font-weight: normal !important; }
@@ -186,7 +184,6 @@ html .gist .gist-file {
 .highlight, .gist-highlight {
   pre { background: none; @include border-radius(0px); border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
-  background: $base03 $noise-bg;
   overflow-y: hidden;
   overflow-x: auto;
 }
@@ -204,7 +201,7 @@ pre, .highlight, .gist-highlight {
 }
 
 .highlight code { 
-  @extend .pre-code; background: #000;
+  @extend .pre-code; background: #303030;
 }
 figure.code, .gist {
   background: none;
@@ -232,7 +229,6 @@ figure.code, .gist {
   margin-bottom: 0;
   @include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-  background: #aaaaaa image-url("code_bg.png") top repeat-x;
   border: 1px solid #565656;
   border-top-color: #cbcbcb;
   border-left-color: #a5a5a5;
@@ -260,15 +256,12 @@ figure.code:not(.panel), .gist {
         @include border-radius(5px);
         @include border-top-radius(0);
     }
-    figcaption {
-        padding: 10px 15px;
-    }
     figcaption, .gist-file {
         color: #333;
         background-color: #f5f5f5;
         @include border-radius(5px);
         span, a[href*='#file'] {
-            font-size: 16px;
+            font-size: 12px;
             line-height: 1.1;
             font-weight: bold;
         }
