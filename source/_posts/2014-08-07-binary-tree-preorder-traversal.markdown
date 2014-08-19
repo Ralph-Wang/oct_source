@@ -6,7 +6,7 @@ comments: true
 keywords: [Binary Tree, 二叉树, 前序遍历]
 description: leetcode 第二题 Binary Tree Preorder Traversal
 tags: [遍历, 二叉树, 前序遍历, DSF, leetcode]
-categories: leetCode
+categories: leetcode
 ---
 
 算法倒是没犯错. 坑在 Python 的一个赋值语法上了
