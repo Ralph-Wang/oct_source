@@ -204,11 +204,11 @@ body                        { background: url(/images/body-bg.jpg) repeat 0 0; }
 .entry img.img-right        { margin: 5px 0px 5px 10px; display: inline; float: right; }
 .entry img.img-center       { margin: 5px auto; display: block; }
 .entry img.img-left         { margin: 5px 10px 5px 0; display: inline; float: left; }
-.pagination-link            { height: 28px; border-top: 1px dashed #898989; margin: 10px 0 80px 0; padding: 10px 0 0; }
+.pagination-link            { height: 28px; border-top: 1px dashed #898989; margin: 10px 0 20px 0; padding: 10px 0 0; display: block;}
 .pagination-link a          { font-family: Georgia; color: #e8e8e8; padding: 0 8px; line-height: 28px; border-radius: 3px 3px; background: #36393e; box-shadow: 1px 1px 5px #888; border-bottom: 1px solid #666; }
 .pagination-link a:hover    { background: #202020; color: #efefef; text-decoration: none; border-bottom: 1px solid #666; }
-.pagination-link .prev      { float: left; }
-.pagination-link .next      { float: right; }
+.pagination-link .prev      { float: left; list-style: none; display: inline; }
+.pagination-link .next      { float: right; list-style: none; display: inline; }
 
 /*--------------------------------------------
                 archives

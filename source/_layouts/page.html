@@ -8,34 +8,16 @@ layout: default
         <article class="entry" role="article">
         {% include article.html %}
         <footer>
-        <p class="meta text-muted">
-        {% include post/author.html %}
-        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-        {% include post/categories.html %}
-        {% include post/tags.html %}
-        </p>
-        {% if page.previous.url or page.next.url %}
-        <ul class="meta text-muted pager">
-            {% if page.previous.url %}
-            <li class="previous"><a href="{{page.previous.url}}"
-                title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title| truncatewords:5}}</a></li>
-            {% endif %}
-            {% if page.next.url %}
-            <li class="next"><a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title | truncatewords:5}} &raquo;</a></li>
-            {% endif %}
-        </ul>
-        {% endif %}
-        {% unless page.sharing == false %}
-        {% include post/sharing.html %}
-        {% endunless %}
+          {% if page.date or page.author %}<p class="meta text-muted">
+            {% if page.author %}{% include post/author.html %}{% endif %}
+            {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+            {% if page.categories %}{% include post/categories.html %}{% endif %}
+          </p>{% endif %}
+          {% unless page.sharing == false %}
+            {% include post/sharing.html %}
+          {% endunless %}
         </footer>
         </article>
-        {% if site.disqus_short_name and page.comments == true %}
-        <section>
-        <h1>Comments</h1>
-        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-        </section>
-        {% endif %}
     </div>
 
     <div class="aside fn-clear">
