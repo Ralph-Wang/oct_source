@@ -5,7 +5,7 @@
 
     {% for post in site.posts limit: site.recent_posts %}
     <ul>
-        <li>&#8227;<a class="list-group-item {% if post.url == page.url %}active{% endif %}" href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></li>
+        <li>{% if post.url == page.url %}&#9830;{%else%}&#8227;{% endif %}<a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></li>
         {% endfor %}
     </ul>
 </div>
