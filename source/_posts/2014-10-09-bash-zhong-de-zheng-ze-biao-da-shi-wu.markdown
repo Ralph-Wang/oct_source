@@ -26,7 +26,7 @@ categories: Linux
 发现原来 bash 也支持正则表达式(误).     
 大概说法是这样的. 在 `[[ ]]` 中写正则就可以了. 下面是一个例子
 
-```
+```bash
 if [[ 1 =~ [0-9] ]];then echo 0;fi
 ```
 
@@ -41,7 +41,7 @@ if [[ 1 =~ [0-9] ]];then echo 0;fi
 一般来说, 需求完成了. 我们就可以收工了.    
 但本着逗[哔]的探究精神, 对 `[[ ]]` 做了如下测试
 
-```
+```bash
 if [[ 1 = [0-9] ]]];then echo 0;fi
 ```
 
@@ -52,7 +52,7 @@ if [[ 1 = [0-9] ]]];then echo 0;fi
 正则的话, 除了 match 还有 search 方式.    
 Ok, 测试下:
 
-```
+```bash
 if [[ abc123ddd = [0-9] ]];then echo 0;fi
 if [[ abc123ddd =~ [0-9] ]];then echo 0;fi
 ```
@@ -63,7 +63,7 @@ if [[ abc123ddd =~ [0-9] ]];then echo 0;fi
 
 好了, 再来试一下其它元字符
 
-```
+```bash
 if [[ 12 = [0-9]. ]];then echo 0;fi
 ```
 
@@ -71,7 +71,7 @@ if [[ 12 = [0-9]. ]];then echo 0;fi
 
 哇嚓, 这又是怎么回事...
 
-```
+```bash
 if [[ 12 = [0-9]* ]];then echo 0;fi
 ```
 
@@ -79,7 +79,7 @@ if [[ 12 = [0-9]* ]];then echo 0;fi
 
 难道...
 
-```
+```bash
 if [[ 12 = ?? ]];then echo 0;fi
 if [[ 12 = * ]];then echo 0;fi
 ```
