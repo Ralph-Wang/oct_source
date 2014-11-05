@@ -65,13 +65,8 @@ default_asides: [custom/asides/weibo.html, custom/asides/recent_posts.html, cust
 # Google Analytics
 google_analytics_tracking_id: UA-47787507-1
 
-# Baidu Analytics
-baidu_analytics_tracking: true
 # Weibo
 weibo_uid: 1854716251
 
 # baidu_share
 baidu_share: true
-
-# duoshuo
-# duoshuo_shortname: ralph-wang
