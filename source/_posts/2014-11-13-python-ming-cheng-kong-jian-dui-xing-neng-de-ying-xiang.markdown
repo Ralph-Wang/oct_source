@@ -3,9 +3,9 @@ layout: post
 title: "Python 名称空间对性能的影响"
 date: 2014-11-13 20:03:05 +0800
 comments: true
-keywords: [Python, 名称空间, 局部变量]
+keywords: [Python, 名称空间, 局部变量, 性能优化]
 description: 重新认识 Python 的名称空间和变量寻址
-tags: [Python, 名称空间, 局部变量]
+tags: [Python, 名称空间, 局部变量, 性能优化]
 categories: Python
 ---
 
