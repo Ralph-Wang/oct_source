@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Python  从数据类型说起</title>
+  
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" href="./deck.js/core/deck.core.css">
+  <link rel="stylesheet" href="./deck.js/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="./deck.js/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="./deck.js/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="./deck.js/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="./deck.js/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- Theme CSS files (menu swaps these out) -->
+  <link rel="stylesheet" id="style-theme-link" href="./deck.js/themes/style/neon.css">
+  <link rel="stylesheet" id="transition-theme-link" href="./deck.js/themes/transition/horizontal-slide.css">
+  
+  <link rel="stylesheet" href="./prettify.css" />
+  <script src="./deck.js/jquery.min.js"></script>
+  <script src="./prettify.js"></script>
+
+  <script src="./deck.js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<section class="slide"><p>2014.12.04<code>@Sina</code></pre>
+<h1>Python <br /> 从数据类型说起</h1></section><section class="slide"><h2>需要明确的一点</h2>
+<h3>Python 只有一种数据类型: 对象</h3>
+<ul>
+<li>
+<p>数字是对象</p>
+</li>
+<li>
+<p>字符串是对象</p>
+</li>
+<li>
+<p>函数是对象</p>
+</li>
+<li>
+<p>甚至类本身也是对象</p>
+</li>
+</ul></section><section class="slide"><h2>数据类型的分类</h2>
+<h3>按用途分</h3>
+<ul>
+<li>
+<p>值类型: 整型, 长整型, 浮点型, 字符串</p>
+</li>
+<li>
+<p>容器类型: <code>元组</code>, 列表, 字典, 集合</p>
+</li>
+</ul>
+<h3>按可变性分</h3>
+<ul>
+<li>
+<p>不可变类型: 整型, 长整型, 浮点型, 字符串, <code>元组</code></pre>
+</li>
+<li>
+<p>可变类型: 列表, 字典, 集合</p>
+</li>
+</ul></section><section class="slide"><h2>数字</h2>
+<ul>
+<li>整型 <code>int</code></li>
+</ul>
+<pre><code>size = 1024</code></pre>
+<ul>
+<li>长整型 <code>long</code></li>
+</ul>
+<pre><code>size = 1024L</code></pre>
+<ul>
+<li>浮点型 <code>float</code></li>
+</ul>
+<pre><code>size = 1024.0</code></pre></section><section class="slide"><h2>数字的四则运算</h2>
+<ul>
+<li>除了基本的四则运算外, 还有额外的<code>地板除</code> (//)</li>
+</ul>
+<pre><code>add   = 1 + 2
+minus = 1 - 2
+multi = 1 * 2
+div   = 5 / 2     # 2
+divf  = 5.0 / 2   # 2.5
+fdiv  = 5 // 2    # 2
+fdiv2 = 5.0 // 2  # 2.0</code></pre></section><section class="slide"><h2>字符串</h2>
+<ul>
+<li>单引号和双引号是等价的</li>
+</ul>
+<pre><code>a_string = 'this is a string'
+another  = "another string"</code></pre>
+<ul>
+<li>三个引号允许字符串换行</li>
+</ul>
+<pre><code>break_lines = '''
+string
+in multi
+lines
+'''</code></pre></section><section class="slide"><h2>字符串的操作</h2>
+<ul>
+<li>运算符</li>
+</ul>
+<pre><code>add   = 'a' + 'b'  # 'ab'
+multi = '-' * 5    # '-----'</code></pre>
+<ul>
+<li>切片</li>
+</ul>
+<pre><code>s = 'this is a string'
+s[0]      # 't'
+s[:4]     # this
+s[5:]     # 'is a string'
+s[0:4:2]  # 'ti'</code></pre>
+<ul>
+<li>常用方法</li>
+</ul>
+<pre><code>'  longdong '.strip()        # 'longdong'
+'test'.find('e')             # 1
+'Hey {0}'.format('World')  # 'Hey World'
+'a,b,c'.split(',')           # ['a', 'b', 'c']</code></pre></section><section class="slide"><h2>元组</h2>
+<ul>
+<li>唯一不可变的容器类型</li>
+</ul>
+<pre><code>t = (1, 'string')</code></pre>
+<ul>
+<li>在逗号(,)没有特殊含义时, 可以省略括号</li>
+</ul>
+<pre><code>t = 1, 'string'</code></pre>
+<ul>
+<li>元组只有一个元素时, 需要额外写一个逗号(,)</li>
+</ul>
+<pre><code>t = (1,)</code></pre></section><section class="slide"><h2>元组的操作</h2>
+<ul>
+<li>运算符</li>
+</ul>
+<pre><code>add = (1,) + (2,) # (1, 2)
+multi = (1,) * 3  # (1, 1, 1)</code></pre>
+<ul>
+<li>切片</li>
+</ul>
+<pre><code>t = (0, 1, 2, 3, 4, 5, 6)
+t[2]   # 2
+t[3:5] # (3, 4)
+t[::2] # (0, 2, 4, 6)</code></pre>
+<ul>
+<li>方法</li>
+</ul>
+<pre><code>t.count(3) # 1
+t.index(4) # 4</code></pre></section><section class="slide"><h2>列表</h2>
+<ul>
+<li>
+<p>可以理解为动态的数组</p>
+</li>
+<li>
+<p>同一个列表里面可以存放不同类型的元素</p>
+</li>
+</ul>
+<pre><code>lst = [1, 'string', []]</code></pre>
+<ul>
+<li>强大的列表表达式</li>
+</ul>
+<pre><code>[i for i in xrange(3) if i%2==0] # [0, 2]</code></pre></section><section class="slide"><h2>列表的操作</h2>
+<ul>
+<li>运算符</li>
+</ul>
+<pre><code>add = [1,] + [2,]  # [1, 2]
+multi = [1] * 3    # [1, 1, 1]</code></pre>
+<ul>
+<li>切片</li>
+</ul>
+<pre><code>t = [0, 1, 2, 3, 4, 5, 6]
+t[2]   # 2
+t[3:5] # [3, 4]
+t[::2] # [0, 2, 4, 6]</code></pre>
+<ul>
+<li>常用方法</li>
+</ul>
+<pre><code>t = [0, 1, 2, 3]
+t.pop()     # 3; t -&gt; [0, 1, 2]
+t.append(0) # None; t -&gt; [0, 1, 2, 0]
+t.reverse() # None; t -&gt; [0, 2, 1, 0]
+t.count(0)  # 2
+t.index(0)  # 0
+t.sort()    # None; t -&gt; [0, 0, 1, 2]</code></pre></section><section class="slide"><h2>字典</h2>
+<ul>
+<li>键必须是可hash的, 值可以是任意类型</li>
+</ul>
+<pre><code>dct = {'key': 'value', 1: 2}</code></pre>
+<ul>
+<li>类似列表, 也有字典表达式</li>
+</ul>
+<pre><code>dct = {i: i * 7 for i in xrange(9)}</code></pre></section><section class="slide"><h2>字典的操作</h2>
+<ul>
+<li>基本操作</li>
+</ul>
+<pre><code>dct = {}
+dct['name'] = 'Ralph'  # {'name': 'Ralph'}
+dct['name']            # 'Ralph'
+dct['no_such_key']     # KeyError</code></pre>
+<ul>
+<li>常用方法</li>
+</ul>
+<pre><code>dct = {'name': 'Ralph'}
+dct.keys()       # ['name']
+dct.values()     # ['Ralph']
+dct.items()      # [('name', 'Ralph')]
+dct.pop('name')  # 'Ralph'; dct -&gt; {}</code></pre></section><section class="slide"><h2>集合</h2>
+<ul>
+<li>
+<p>集合唯一没有字面量的内建类型</p>
+</li>
+<li>
+<p>集合中的元素必须是可hash的</p>
+</li>
+</ul>
+<pre><code>s = set([1, 2, 'string', (1, 2)])</code></pre></section><section class="slide"><h2>集合的操作</h2>
+<ul>
+<li>运算符</li>
+</ul>
+<pre><code>set([1]) - set([2]) # set([1])</code></pre>
+<ul>
+<li>常用方法</li>
+</ul>
+<pre><code>a = set([1])
+b = set([2])
+a.add(2)        # None; a -&gt; set([1, 2])
+a.union(b)      # set([1,2])
+a.difference(b) # set([1])</code></pre></section><section class="slide"><h1>print '<code>Thank You</code>'</h1></section>
+
+<p class="deck-status">
+<span class="deck-status-current"></span>
+/
+<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- Deck Core and extensions -->
+<script src="./deck.js/core/deck.core.js"></script>
+<script src="./deck.js/extensions/hash/deck.hash.js"></script>
+<script src="./deck.js/extensions/menu/deck.menu.js"></script>
+<script src="./deck.js/extensions/goto/deck.goto.js"></script>
+<script src="./deck.js/extensions/status/deck.status.js"></script>
+<script src="./deck.js/extensions/navigation/deck.navigation.js"></script>
+
+<!-- Specific to this page -->
+<script>
+$(function() {
+        // Deck initialization
+        $.deck('.slide');
+        $('pre code').parent().addClass('prettyprint');
+        prettyPrint();
+        });
+</script>
+
+</body>
+</html>
