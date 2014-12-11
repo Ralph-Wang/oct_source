@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Python 技巧  单元测试</title>
+  
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" href="./deck.js/core/deck.core.css">
+  <link rel="stylesheet" href="./deck.js/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="./deck.js/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="./deck.js/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="./deck.js/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="./deck.js/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- Theme CSS files (menu swaps these out) -->
+  <link rel="stylesheet" id="style-theme-link" href="./deck.js/themes/style/neon.css">
+  <link rel="stylesheet" id="transition-theme-link" href="./deck.js/themes/transition/horizontal-slide.css">
+  
+  <link rel="stylesheet" href="./prettify.css" />
+  <script src="./deck.js/jquery.min.js"></script>
+  <script src="./prettify.js"></script>
+
+  <script src="./deck.js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<section class="slide"><p>2014.12 @ <code>Sina</code></pre>
+<h1>Python 技巧 <br> 单元测试</h1></section><section class="slide"><h2>大纲</h2>
+<ul>
+<li>
+<p>为什么要做单元测试</p>
+</li>
+<li>
+<p>Python 的单元测试框架</p>
+</li>
+<li>
+<p>实现一个斐波那契函数的单元测试</p>
+</li>
+<li>
+<p>修改斐波那契函数的算法, 执行单元测试</p>
+</li>
+</ul></section><section class="slide"><h2>几种类型的代码</h2>
+<ul>
+<li>明显没有错误的代码</li>
+</ul>
+<pre><code>for key in black_list:
+    doc.pop(key, None)</code></pre>
+<ul>
+<li>没有明显错误的代码</li>
+</ul>
+<pre><code>if obj:
+    row[key] = obj
+else:
+    row[key] = None</code></pre>
+<ul>
+<li>明显有错误的代码</li>
+</ul>
+<pre><code>def parse_json(jstring):
+    try:
+        j = json.loads(jstring)
+    except Exception:
+        j = {}
+    return j</code></pre></section><section class="slide"><h2>为什么要做单元测试</h2>
+<h3>度量代码质量</h3>
+<p>框架 A 有单元测试, 全数通过; 框架 B 连测试代码都没有. 你用哪个?</p>
+<h3>重构</h3>
+<p>底层算法优化, 结构改变. 不做单元测试, 怎么保证接口功能一致.</p>
+<h3>增强信心</h3>
+<p>这可是单元测试 100% 覆盖率的代码. 全部跑通了的哦!</p></section><section class="slide"><h2>大家都在用的单元测试框架</h2>
+<h3>unittest</h3>
+<p>从 2.1 开始就是 Python 的标准库了, 不需要额外安装</p>
+<h3>nosetests</h3>
+<p>语法兼容 unittest, 可以和 coverage 工具生成覆盖率报告</p>
+<h3>pytest</h3>
+<p>Python 目前集成度最高的测试框架, 但学习成本也相对较高</p></section><section class="slide"><h2>如何选择</h2>
+<ul>
+<li>
+<p>上手容易</p>
+</li>
+<li>
+<p>方便生成覆盖率报告</p>
+</li>
+</ul>
+<h3>nosetests 是目前的上上之选</h3></section><section class="slide"><h2>如何安装</h2>
+<ul>
+<li>Ubuntu 先安装 pip</li>
+</ul>
+<pre><code>apt-get install python-pip</code></pre>
+<ul>
+<li>nosetests</li>
+</ul>
+<pre><code>pip install nose</code></pre></section><section class="slide"><h2>开始写斐波那契程序</h2>
+<h3>需求:</h3>
+<ul>
+<li>允许计算 [0, 40] 之间的斐波那契数</li>
+<li>范围外的数字, 返回字符串 'out of range'</li>
+<li>非 int 类型, 返回字符串 'not int'</li>
+</ul>
+<pre><code>fib(10)   # return 55
+fib(41)   # return 'out of range'
+fib('4')  # return 'not int'</code></pre>
+<h3>文件规划:</h3>
+<pre><code>$ tree
+|-- fib.py
+|-- test.py</code></pre></section><section class="slide"><h2>代码未动, 测试先行</h2>
+<ul>
+<li>nose 框架不需额外引入</li>
+<li>
+<p>直接将需求变为测试用例</p>
+</li>
+<li>
+<p>@<code>test.py</code></pre>
+</li>
+</ul>
+<pre><code>import fib
+f = fib.fib
+def test_normal():
+    assert f(0) == 0
+    assert f(1) == 1
+    assert f(10) == 55</code></pre></section><section class="slide"><h2>测试有了, 开始写功能</h2>
+<ul>
+<li>@<code>fib.py</code></li>
+</ul>
+<pre><code>def fib(n):
+    if n &lt; 2:
+        return n
+    return fib(n-1) + fib(n-2)</code></pre>
+<ul>
+<li>执行测试</li>
+</ul>
+<pre><code>$ nosetests
+Ran 1 test in 0.002s
+OK</code></pre></section><section class="slide"><h2>补完测试用例和功能</h2>
+<ul>
+<li>@<code>test.py</code></li>
+</ul>
+<pre><code>def test_range():
+    assert f(-1) == 'out of range'
+    assert f(41) == 'out of range'
+def test_value():
+    assert f('string') == 'not int'</code></pre>
+<ul>
+<li>@<code>fib.py</code></li>
+</ul>
+<pre><code>def fib(n):
+    if not isinstance(n, int):
+        return 'not int'
+    if n &lt; 0 or n &gt; 40:
+        return 'out of range'
+    if n &lt; 2:
+        return n
+    return fib(n-1) + fib(n-2)</code></pre></section><section class="slide"><h2>再执行测试</h2>
+<pre><code>$ nosetests
+Ran 3 test in 0.002s
+OK</code></pre></section><section class="slide"><h2>换个算法</h2>
+<ul>
+<li><code>fib(n-1) + fib(n-2)</code> 重复计算了太多</li>
+<li>
+<p>换成自底向上的算法. 高大上一点叫 <code>动态规划</code></pre>
+</li>
+<li>
+<p>@<code>fib.py</code></pre>
+</li>
+</ul>
+<pre><code>..省略..
+    pre = 0
+    cur = 1
+    for i in xrange(n):
+        pre, cur = cur, pre + cur
+    return cur</code></pre>
+<ul>
+<li>执行测试</li>
+</ul>
+<pre><code>$ nosetests
+F..
+FAIL: test.test_normal  
+ ..省略一些不重要的信息
+    assert f(0) == 0
+ ..省略一些不重要的信息</code></pre></section><section class="slide"><h2>修复 bug</h2>
+<ul>
+<li>@<code>fib.py</code></li>
+</ul>
+<pre><code>pre = 1
+cur = 0</code></pre>
+<ul>
+<li>再执行测试</li>
+</ul>
+<pre><code>$ nosetests
+Ran 3 test in 0.002s
+OK</code></pre></section><section class="slide"><h1>print '<code>Thank You</code>'</h1></section>
+
+<p class="deck-status">
+<span class="deck-status-current"></span>
+/
+<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- Deck Core and extensions -->
+<script src="./deck.js/core/deck.core.js"></script>
+<script src="./deck.js/extensions/hash/deck.hash.js"></script>
+<script src="./deck.js/extensions/menu/deck.menu.js"></script>
+<script src="./deck.js/extensions/goto/deck.goto.js"></script>
+<script src="./deck.js/extensions/status/deck.status.js"></script>
+<script src="./deck.js/extensions/navigation/deck.navigation.js"></script>
+
+<!-- Specific to this page -->
+<script>
+$(function() {
+        // Deck initialization
+        $.deck('.slide');
+        $('pre code').parent().addClass('prettyprint');
+        prettyPrint();
+        });
+</script>
+
+</body>
+</html>
