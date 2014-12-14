@@ -31,6 +31,10 @@ Hi, 我叫逗...咳~我叫\_漏斗.
 
 没了...
 
+## 拿得出手的仓库:
+
+[should](https://github.com/Ralph-Wang/should): 将 node.js 的 should 断言库翻译到 Python 中
+
 ## 一则拙劣的广告
 
 访问 Google 各项服务的强大工具: [云梯](http://ugetvpn.com/?r=694b573a7aadd55a)
