@@ -1,4 +1,4 @@
-2014.12.04`@Sina`
+2014.12`@Sina`
 
 # Python <br /> 从数据类型说起
 
@@ -258,6 +258,8 @@ dct.keys()       # ['name']
 dct.values()     # ['Ralph']
 dct.items()      # [('name', 'Ralph')]
 dct.pop('name')  # 'Ralph'; dct -> {}
+dct.get('name')  # 'Ralph'
+dct.get('no')    # None
 ```
 
 ...
@@ -293,5 +295,34 @@ a.difference(b) # set([1])
 ```
 
 ...
+
+## 容器类型的遍历
+
+### 所有容器类型都是可遍历的
+
+```
+for item in <tuple, list, dict, set>:
+    statements
+```
+
+###  遍历容器时需要注意的事
+
+* 遍历字典时, `item` 的取值是 key
+
+```
+for item in {'a': 1, 'b': 2}:
+    print item # a b
+```
+
+* 不要在遍历可变容器(list, dict, set)时, 对容器进行增删操作
+
+```
+l = range(10)
+for i in l:
+    print l.pop() # 9, 8, 7, 6, 5
+    # 0,1,2,3,4 被吃掉了
+```
+
+....
 
 # print '`Thank You`'

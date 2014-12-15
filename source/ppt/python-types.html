@@ -35,7 +35,7 @@
 
 <body class="deck-container">
 
-<section class="slide"><p>2014.12.04<code>@Sina</code></pre>
+<section class="slide"><p>2014.12<code>@Sina</code></pre>
 <h1>Python <br /> 从数据类型说起</h1></section><section class="slide"><h2>需要明确的一点</h2>
 <h3>Python 只有一种数据类型: 对象</h3>
 <ul>
@@ -211,7 +211,9 @@ dct['no_such_key']     # KeyError</code></pre>
 dct.keys()       # ['name']
 dct.values()     # ['Ralph']
 dct.items()      # [('name', 'Ralph')]
-dct.pop('name')  # 'Ralph'; dct -&gt; {}</code></pre></section><section class="slide"><h2>集合</h2>
+dct.pop('name')  # 'Ralph'; dct -&gt; {}
+dct.get('name')  # 'Ralph'
+dct.get('no')    # None</code></pre></section><section class="slide"><h2>集合</h2>
 <ul>
 <li>
 <p>集合唯一没有字面量的内建类型</p>
@@ -232,7 +234,23 @@ dct.pop('name')  # 'Ralph'; dct -&gt; {}</code></pre></section><section class="s
 b = set([2])
 a.add(2)        # None; a -&gt; set([1, 2])
 a.union(b)      # set([1,2])
-a.difference(b) # set([1])</code></pre></section><section class="slide"><h1>print '<code>Thank You</code>'</h1></section>
+a.difference(b) # set([1])</code></pre></section><section class="slide"><h2>容器类型的遍历</h2>
+<h3>所有容器类型都是可遍历的</h3>
+<pre><code>for item in &lt;tuple, list, dict, set&gt;:
+    statements</code></pre>
+<h3>遍历容器时需要注意的事</h3>
+<ul>
+<li>遍历字典时, <code>item</code> 的取值是 key</li>
+</ul>
+<pre><code>for item in {'a': 1, 'b': 2}:
+    print item # a b</code></pre>
+<ul>
+<li>不要在遍历可变容器(list, dict, set)时, 对容器进行增删操作</li>
+</ul>
+<pre><code>l = range(10)
+for i in l:
+    print l.pop() # 9, 8, 7, 6, 5
+    # 0,1,2,3,4 被吃掉了</code></pre></section><section class="slide"><h1>print '<code>Thank You</code>'</h1></section>
 
 <p class="deck-status">
 <span class="deck-status-current"></span>
