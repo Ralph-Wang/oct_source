@@ -1,0 +1,7 @@
+.entry a.toc-active {
+    font-size: 14px;
+    color: #838383;
+    background-color: #e8e8e8;
+    padding: 3px;
+    border: none;
+}
