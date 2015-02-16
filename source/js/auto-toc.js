@@ -1,6 +1,6 @@
 ;
 
-var sections = $('div.entry-content h2');
+var sections = $('div.entry-content h2, div.entry-content h3');
 
 var titles = $('ul#markdown-toc a');
 titles[0].className = 'toc-active';

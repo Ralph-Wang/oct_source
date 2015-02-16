@@ -1,3 +1,6 @@
+.entry ul#markdown-toc, .entry ul#markdown-toc ul {
+  padding: 0px;
+}
 .entry a.toc-active {
     font-size: 14px;
     color: #838383;
