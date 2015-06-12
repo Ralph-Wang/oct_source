@@ -59,19 +59,19 @@
 <ul>
 <li>没有明显错误的代码</li>
 </ul>
-<pre><code>if obj:
-    row[key] = obj
-else:
-    row[key] = None</code></pre>
-<ul>
-<li>明显有错误的代码</li>
-</ul>
 <pre><code>def parse_json(jstring):
     try:
         j = json.loads(jstring)
     except Exception:
         j = {}
-    return j</code></pre></section><section class="slide"><h2>为什么要做单元测试</h2>
+    return j</code></pre>
+<ul>
+<li>明显有错误的代码</li>
+</ul>
+<pre><code>if obj:
+    row[key] = obj
+else:
+    row[key] = None</code></pre></section><section class="slide"><h2>为什么要做单元测试</h2>
 <h3>度量代码质量</h3>
 <p>框架 A 有单元测试, 全数通过; 框架 B 连测试代码都没有. 你用哪个?</p>
 <h3>重构</h3>

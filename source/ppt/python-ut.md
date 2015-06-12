@@ -31,10 +31,12 @@ for key in black_list:
 * 没有明显错误的代码
 
 ```
-if obj:
-    row[key] = obj
-else:
-    row[key] = None
+def parse_json(jstring):
+    try:
+        j = json.loads(jstring)
+    except Exception:
+        j = {}
+    return j
 ```
 
 
@@ -42,12 +44,10 @@ else:
 * 明显有错误的代码
 
 ```
-def parse_json(jstring):
-    try:
-        j = json.loads(jstring)
-    except Exception:
-        j = {}
-    return j
+if obj:
+    row[key] = obj
+else:
+    row[key] = None
 ```
 
 ...
