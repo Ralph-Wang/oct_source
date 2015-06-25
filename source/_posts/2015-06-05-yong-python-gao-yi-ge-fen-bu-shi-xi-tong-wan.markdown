@@ -54,7 +54,7 @@ def QueueManagerClient():
     return _QueueManagerClient
 ```
 
-因为具体的队列是在 `q.py` 中创建的, 所以这里 `base.py` 只提供一个函数.
+因为具体的队列是在**队列程序**(`q.py`)中创建的, 所以这里 `base.py` 只提供一个函数.
 
 客户端虽然不需要在使用时绑定具体队列, 但为了接口调用的一致, 仍然封装到一个函数
 
