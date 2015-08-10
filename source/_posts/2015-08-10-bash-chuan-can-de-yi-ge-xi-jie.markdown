@@ -3,10 +3,10 @@ layout: post
 title: "bash 传参的一个细节"
 date: 2015-08-10 18:04:59 +0800
 comments: true
-keywords: 
-description: 
-tags: 
-categories: 
+keywords: [bash, function, 参数]
+description: "如题"
+tags: [Linux, bash, function, 参数]
+categories: Linux
 ---
 
 
