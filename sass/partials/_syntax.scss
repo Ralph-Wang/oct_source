@@ -254,7 +254,7 @@ figure.code:not(.panel), .gist {
     .highlight {
         border-top: 1px solid #ddd;
         @include border-radius(5px);
-        @include border-top-radius(0);
+        @include border-top-radius(5px);
     }
     figcaption, .gist-file {
         color: #333;
