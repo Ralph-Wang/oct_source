@@ -107,7 +107,7 @@ def wrap(title, html):
 
 def main(argv):
     for filename in argv:
-        if filename.endswith('.md'):
+        if filename.endswith('.md') or filename.endswith(".markdown"):
             print 'rendering', filename
             write_to_file('%s.html' % filename[:-3], wrap(*render_file(filename)))
 
