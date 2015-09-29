@@ -3,6 +3,7 @@
 
 import sys
 import re
+import os
 import markdown
 import codecs
 
@@ -107,9 +108,10 @@ def wrap(title, html):
 
 def main(argv):
     for filename in argv:
-        if filename.endswith('.md') or filename.endswith(".markdown"):
+        name, extension = os.path.splitext(filename)
+        if extension in {".md", ".markdown"}:
             print 'rendering', filename
-            write_to_file('%s.html' % filename[:-3], wrap(*render_file(filename)))
+            write_to_file('%s.html' % name, wrap(*render_file(filename)))
 
 
 if __name__ == '__main__':
