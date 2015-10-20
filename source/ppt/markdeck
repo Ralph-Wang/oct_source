@@ -10,7 +10,7 @@ import codecs
 TAG_FOR_WRAP = '{{{slides}}}'
 WRAP_FILE = './resources/wrap.html'
 SECTION_WRAPER_FILE = './resources/section.html'
-SECTION_SPLIT_PATTERN = re.compile(r'\.{3,}')
+SECTION_SPLIT_PATTERN = re.compile(r'\n\.{3,}\n')
 HTML_TAG_PATTERN = re.compile('<.*?>')
 TITLE_PATTERN = re.compile('<h1>(.*?)</h1>')
 SUBSLIDE_PATTERN = re.compile(r'<(?P<tag>.*?)>;')
