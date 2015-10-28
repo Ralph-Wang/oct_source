@@ -11,7 +11,7 @@
 
 * Python 的单元测试框架
 
-* 实现一个斐波那契函数的单元测试
+* 实现一个斐波那契函数及单元测试
 
 * 修改斐波那契函数的算法, 执行单元测试
 
@@ -34,7 +34,7 @@ for key in black_list:
 def parse_json(jstring):
     try:
         j = json.loads(jstring)
-    except Exception:
+    except Exception: # Magic Exception
         j = {}
     return j
 ```
@@ -44,7 +44,7 @@ def parse_json(jstring):
 * 明显有错误的代码
 
 ```
-if obj:
+if obj: # how about 'obj = 0'
     row[key] = obj
 else:
     row[key] = None
