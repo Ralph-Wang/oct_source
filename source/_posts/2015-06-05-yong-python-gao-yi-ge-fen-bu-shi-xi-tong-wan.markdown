@@ -3,10 +3,10 @@ layout: post
 title: "用 Python 搞一个分布式系统玩?"
 date: 2015-06-05 17:08:19 +0800
 comments: true
-keywords: 
-description: 
-tags: 
-categories: 
+keywords: [Python, 多进程, 分布式]
+description: 利用 multiprocessing 的队列完成分布式程序
+tags: [Python, 多进程, 分布式]
+categories: Python
 ---
 
 
