@@ -77,10 +77,13 @@ class timer(object):
         ret = self.func(*args)
         return ret, time.time() - start
 
-@timer
 def get(url):
     return requests.get(url)
+
+timer_get = timer(get)
 ```
+
+> 2016.01.29 更新: 要使装饰后的对象能被 pickle, 还不能使用 @ 语法装完成进行装饰
 
 
 ## 分析
