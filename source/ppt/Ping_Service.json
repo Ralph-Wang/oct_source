@@ -1,0 +1,660 @@
+{
+	"root": {
+		"id": "xqxhjfqc",
+		"text": "Ping Service",
+		"layout": "map",
+		"children": [
+			{
+				"id": "zlheztvz",
+				"text": "新增",
+				"side": "right",
+				"children": [
+					{
+						"id": "guybieev",
+						"text": "名称",
+						"children": [
+							{
+								"id": "zhbnammy",
+								"text": "1. 填写 ABc123"
+							},
+							{
+								"id": "tdvnleaa",
+								"text": "2. 填写 ABc*123?"
+							},
+							{
+								"id": "jjsbdnpm",
+								"text": "3. 留空不填"
+							}
+						]
+					},
+					{
+						"id": "tmzszcdy",
+						"text": "描述",
+						"children": [
+							{
+								"id": "vycvuoiq",
+								"text": "1. 填写 Abc1024*/()"
+							},
+							{
+								"id": "fyzfuzcs",
+								"text": "2. 留空不填"
+							},
+							{
+								"id": "mybxqfeo",
+								"text": "3. 填写 1024 个字符"
+							},
+							{
+								"id": "lvlbpokj",
+								"text": "4. 填写 1025 个字符"
+							}
+						]
+					},
+					{
+						"id": "dkokpeqh",
+						"text": "分组",
+						"children": [
+							{
+								"id": "ozczmqia",
+								"text": "1. 搜索分组"
+							},
+							{
+								"id": "uvjocank",
+								"text": "2. 填写不存在的分组"
+							}
+						]
+					},
+					{
+						"id": "haryuuvn",
+						"text": "主机名/IP",
+						"children": [
+							{
+								"id": "ehlpxoan",
+								"text": "1. 填写 bing.com"
+							},
+							{
+								"id": "qbcokiex",
+								"text": "2. 填写 &nbsp;204.79.197.200"
+							},
+							{
+								"id": "whmmjfnf",
+								"text": "3. 填写非法主机名 www,baidu,com"
+							},
+							{
+								"id": "hhzmkicb",
+								"text": "4. 填写非法IP 256.256.256.256"
+							},
+							{
+								"id": "gpsufvvb",
+								"text": "5. 留空不填"
+							}
+						]
+					},
+					{
+						"id": "dmtodxai",
+						"text": "发包数",
+						"children": [
+							{
+								"id": "famnvgnr",
+								"text": "1. 默认选择 5"
+							},
+							{
+								"id": "yytbuieh",
+								"text": "2. 5/10/15/20/30/50 可选"
+							}
+						]
+					},
+					{
+						"id": "jepgmetu",
+						"text": "检测源",
+						"children": [
+							{
+								"id": "kcmixuaz",
+								"text": "使用默认配置",
+								"children": [
+									{
+										"id": "gawowqld",
+										"text": "1. 选中"
+									},
+									{
+										"id": "pgodhota",
+										"text": "2. 取消选中"
+									},
+									{
+										"id": "dgxfkokm",
+										"text": "3. 取消选中其它项时, 联动取消"
+									}
+								]
+							},
+							{
+								"id": "dpikkaax",
+								"text": "全选",
+								"children": [
+									{
+										"id": "vzgudncs",
+										"text": "1. 选中"
+									},
+									{
+										"id": "zkbjdyvq",
+										"text": "2. 取消选中"
+									},
+									{
+										"id": "tcewultr",
+										"text": "3. 取消选中具体地点时, 联动取消"
+									}
+								]
+							},
+							{
+								"id": "leybqbmc",
+								"text": "各地点",
+								"children": [
+									{
+										"id": "uvxsrrxv",
+										"text": "1. 选中"
+									},
+									{
+										"id": "hwsvzzyy",
+										"text": "2. 取消选中"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "ovreioyd",
+						"text": "报警触发",
+						"children": [
+							{
+								"id": "fozrimhi",
+								"text": "检测周期",
+								"children": [
+									{
+										"id": "ivbyxevq",
+										"text": "1. &nbsp;默认5"
+									},
+									{
+										"id": "svoohagk",
+										"text": "2. &nbsp;1~10 可选"
+									}
+								]
+							},
+							{
+								"id": "pjgbedkf",
+								"text": "检测期望",
+								"children": [
+									{
+										"id": "ubcopywo",
+										"text": "包数量",
+										"children": [
+											{
+												"id": "kxgkoqqv",
+												"text": "1. 默认 80%"
+											},
+											{
+												"id": "iipcmcmw",
+												"text": "2. 10%~100% 可选"
+											}
+										]
+									},
+									{
+										"id": "ajvssntt",
+										"text": "响应时间",
+										"children": [
+											{
+												"id": "vjsvzckv",
+												"text": "1. 默认 500"
+											},
+											{
+												"id": "voaeokpb",
+												"text": "2. 输入 1"
+											},
+											{
+												"id": "jitfmrne",
+												"text": "3. 输入&nbsp;9223372036854776001"
+											},
+											{
+												"id": "zhjvzivm",
+												"text": "4. 输入 1e100"
+											},
+											{
+												"id": "ogbftkzl",
+												"text": "5. 输入 abcdfeg"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "zjunahvk",
+								"text": "失败次数",
+								"children": [
+									{
+										"id": "ifcsfywf",
+										"text": "1. 默认 1"
+									},
+									{
+										"id": "ocivdhmm",
+										"text": "2. 1~10 可选"
+									}
+								]
+							},
+							{
+								"id": "iangchog",
+								"text": "多机阈值",
+								"children": [
+									{
+										"id": "wezvsgrx",
+										"text": "机器数量",
+										"children": [
+											{
+												"id": "szxhmdsh",
+												"text": "1. 默认 all"
+											},
+											{
+												"id": "yjsngqmz",
+												"text": "2. all/half/more than one/any 可选"
+											}
+										]
+									},
+									{
+										"id": "uuhrkvmi",
+										"text": "报警信息",
+										"children": [
+											{
+												"id": "reomcdrx",
+												"text": "1. 默认 warning"
+											},
+											{
+												"id": "ugzenvvc",
+												"text": "2. warning/error/critical 可选"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "vhyczgwt",
+								"text": "单机触发",
+								"children": [
+									{
+										"id": "rszcdhjl",
+										"text": "1. 默认 nohting"
+									},
+									{
+										"id": "tebzxnpf",
+										"text": "2. nothing/warning/error/critical 可选"
+									}
+								]
+							},
+							{
+								"id": "hjewwcsk",
+								"text": "使用默认配置",
+								"children": [
+									{
+										"id": "ojihxqxa",
+										"text": "1. 选中, 重置所有选项"
+									},
+									{
+										"id": "afpyqxsy",
+										"text": "2. 取消, 无效果"
+									},
+									{
+										"id": "qgoqolvp",
+										"text": "3. 修改任意项, 联动取消"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "ynrtnxdc",
+						"text": "其它属性"
+					}
+				]
+			},
+			{
+				"id": "kiragcqp",
+				"text": "删除",
+				"side": "left",
+				"children": [
+					{
+						"id": "gzxyygfu",
+						"text": "1. 确认删除"
+					},
+					{
+						"id": "fgglnvhl",
+						"text": "2. 取消删除"
+					}
+				]
+			},
+			{
+				"id": "vtjoypxk",
+				"text": "应用",
+				"side": "right",
+				"children": [
+					{
+						"id": "crwazytl",
+						"text": "图",
+						"children": [
+							{
+								"id": "jpltnzrw",
+								"text": "总览图",
+								"children": [
+									{
+										"id": "eclxwcwg",
+										"text": "状态总览"
+									},
+									{
+										"id": "ugjcnhpi",
+										"text": "平均RTT"
+									}
+								]
+							},
+							{
+								"id": "sufseewr",
+								"text": "各地区图",
+								"children": [
+									{
+										"id": "ckvrrgmp",
+										"text": "状态图"
+									},
+									{
+										"id": "drpzmayo",
+										"text": "响应时间"
+									},
+									{
+										"id": "dqbilfvh",
+										"text": "发包统计"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "hesfltpx",
+						"text": "原始数据",
+						"children": [
+							{
+								"id": "lqdyqyqt",
+								"text": "刷新数据",
+								"children": [
+									{
+										"id": "pldsjizj",
+										"text": "1. 点击后重新刷新数据"
+									}
+								]
+							},
+							{
+								"id": "vnybubnq",
+								"text": "选择检查点",
+								"children": [
+									{
+										"id": "fhbpaxxw",
+										"text": "1. 默认选择总览"
+									},
+									{
+										"id": "stxnsuiw",
+										"text": "2. 可以选择所有配置的检查源"
+									}
+								]
+							},
+							{
+								"id": "jtwpmfuz",
+								"text": "显示原始数据",
+								"children": [
+									{
+										"id": "nvyiyohx",
+										"text": "1. 选中显示原始数据表格"
+									},
+									{
+										"id": "btpqysvb",
+										"text": "2. 取消不显示数据表格"
+									},
+									{
+										"id": "wiqbuwkn",
+										"text": "3. 根据选择检查点显示不同表格"
+									}
+								]
+							},
+							{
+								"id": "xionpevl",
+								"text": "查看路由",
+								"children": [
+									{
+										"id": "rftnvagr",
+										"text": "1. 选中查看节点检查目标的路由"
+									},
+									{
+										"id": "kgsokkxu",
+										"text": "2. 取消隐藏路由"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "krgvubmb",
+						"text": "信息",
+						"children": [
+							{
+								"id": "bxbyfzkv",
+								"text": "显示分组属性"
+							},
+							{
+								"id": "ufssubsw",
+								"text": "显示服务属性"
+							}
+						]
+					},
+					{
+						"id": "ctlmlrjv",
+						"text": "警告",
+						"children": [
+							{
+								"id": "jwpugnbj",
+								"text": "产生警告",
+								"children": [
+									{
+										"id": "hjubsysq",
+										"text": "1. 满足服务配置条件时, 产生警告"
+									},
+									{
+										"id": "jucoinuz",
+										"text": "2. 警告未解除时, &nbsp;再次满足警告条件不产生新警告"
+									},
+									{
+										"id": "mhrbhrun",
+										"text": "3. 新检测后警告条件不满足后, 警告解除"
+									},
+									{
+										"id": "vhwsumlp",
+										"text": "4. 单机/多机警告信息独立触发及解除."
+									},
+									{
+										"id": "vsyvgayw",
+										"text": "5. 单机警告按检测源分别触发"
+									},
+									{
+										"id": "uzfwooba",
+										"text": "6. SDT 期间产生的警告标记为 In SDT"
+									}
+								]
+							},
+							{
+								"id": "qiokdayq",
+								"text": "知晓警告",
+								"children": [
+									{
+										"id": "aridtpfb",
+										"text": "1. 选中警告项, 填写备注信息解决. &nbsp;警告标记为已知晓"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "lwimrefh",
+						"text": "SDT",
+						"children": [
+							{
+								"id": "eflvxhnx",
+								"text": "新增",
+								"children": [
+									{
+										"id": "ibnnqehj",
+										"text": "检测源",
+										"children": [
+											{
+												"id": "vgkmfpbm",
+												"text": "所有源",
+												"children": [
+													{
+														"id": "ydepgyod",
+														"text": "1. 选中, 收起其它项"
+													},
+													{
+														"id": "tqhowgzj",
+														"text": "2. 取消, 展开其它项"
+													}
+												]
+											},
+											{
+												"id": "btogbhvy",
+												"text": "具体地点"
+											}
+										]
+									},
+									{
+										"id": "besgnndr",
+										"text": "时间段",
+										"children": [
+											{
+												"id": "npwsctwl",
+												"text": "单次",
+												"children": [
+													{
+														"id": "yxhgtseh",
+														"text": "1. 设置起始时间, 不可输入"
+													},
+													{
+														"id": "dafsanff",
+														"text": "2. 设置截止时间, 不可输入"
+													}
+												]
+											},
+											{
+												"id": "rfsmvanf",
+												"text": "重复",
+												"children": [
+													{
+														"id": "jojntfta",
+														"text": "重复周期",
+														"children": [
+															{
+																"id": "igtgovbi",
+																"text": "1. 默认 daily"
+															},
+															{
+																"id": "djltjkcg",
+																"text": "2. daily/weekly/monthly 可选"
+															}
+														]
+													},
+													{
+														"id": "llteormu",
+														"text": "重复时间",
+														"children": [
+															{
+																"id": "kwkbiqut",
+																"text": "1. 设置起始时间, 不可输入"
+															},
+															{
+																"id": "yprkhoak",
+																"text": "2. 设置起始时间, 不可输入"
+															},
+															{
+																"id": "jrecsryt",
+																"text": "3. (weekly) 设置周一~周日, 默认周一"
+															},
+															{
+																"id": "gghswqvw",
+																"text": "4. (monthly)设置日期, 默认 1st"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "emdekhko",
+										"text": "备注",
+										"children": [
+											{
+												"id": "rpqifmvw",
+												"text": "1. 输入 ABc123"
+											},
+											{
+												"id": "zayuxugj",
+												"text": "2. 留空"
+											},
+											{
+												"id": "gfuoxhly",
+												"text": "3. 输入 128 字符"
+											},
+											{
+												"id": "szxyjtsy",
+												"text": "4. 输入 129 字符"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "xammoriz",
+								"text": "列表",
+								"children": [
+									{
+										"id": "avjnbylm",
+										"text": "设置",
+										"children": [
+											{
+												"id": "nwuszikq",
+												"text": "1. 检测源不可修改"
+											},
+											{
+												"id": "cpknwyip",
+												"text": "2. 时间段 -- 同新增"
+											},
+											{
+												"id": "fodhhuti",
+												"text": "3. 备注 -- 同新增"
+											}
+										]
+									},
+									{
+										"id": "libdmbph",
+										"text": "1. 重复 SDT 不可停止"
+									},
+									{
+										"id": "jacosdue",
+										"text": "2. 单次 SDT 可以停止"
+									}
+								]
+							},
+							{
+								"id": "quxijome",
+								"text": "应用",
+								"children": [
+									{
+										"id": "zkiynghu",
+										"text": "1. SDT 生效期望不进行检测"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
